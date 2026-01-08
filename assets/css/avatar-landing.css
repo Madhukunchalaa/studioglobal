@@ -538,17 +538,18 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.5rem;
 }
 
-/* SECTION 9: FINAL CTA */
+/* SECTION 9: FINAL CTA (REDESIGN: MINIMAL) */
 .cta-section {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    background: linear-gradient(180deg, var(--color-bg) 0%, #111 100%);
+    background: #000;
     text-align: center;
     padding: var(--spacing-md);
+    overflow: hidden;
 }
 
 .cta-avatar-bg {
@@ -556,24 +557,46 @@ h1, h2, h3, h4, h5, h6 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 60%;
-    height: 80%;
-    opacity: 0.3;
+    width: 100%;
+    height: 100%;
     z-index: 0;
-    pointer-events: none;
-    mask-image: radial-gradient(circle, black 40%, transparent 70%);
-    -webkit-mask-image: radial-gradient(circle, black 40%, transparent 70%);
+    opacity: 0.5; /* Slightly darker for better text contrast */
 }
 
 .cta-avatar-bg img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
+/* Minimalist Content - No Glass Box */
 .cta-content {
     position: relative;
     z-index: 2;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 900px;
+    width: 100%;
+    transform: translateY(20px);
+    opacity: 1;
+    animation: fadeIn 1s forwards;
+}
+
+.cta-content h2 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    font-weight: 400;
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    opacity: 0.9;
 }
 
 /* FOOTER */
