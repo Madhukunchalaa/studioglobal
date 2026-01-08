@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudioX AI Avatars | The Future of Digital Identity</title>
+    <meta name="description" content="Ultra-realistic AI avatars for enterprise. Indistinguishable from reality.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/avatar-landing.css">
+    
+    <!-- AOS Animation Library (Optional, using native CSS for now, can add later) -->
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav style="position: fixed; top: 0; left: 0; width: 100%; padding: 2rem; z-index: 100; display: flex; justify-content: space-between; align-items: center; mix-blend-mode: difference;">
+        <a href="index.html" class="logo-link">
+            <img src="assets/images/logo.png" alt="StudioX Logo" class="logo-img">
+        </a>
+        <a href="#contact" class="btn-primary" style="border: none; font-size: 0.8rem;">Contact</a>
+    </nav>
+
+    <!-- SECTION 1: HERO (Opening Scene) -->
+    <section class="section-fullscreen">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="video-bg" style="opacity: 0.5;">
+            <!-- Using existing video asset -->
+            <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Film Grain Overlay Effect (CSS only) -->
+        <div class="overlay" style="background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,1) 100%);"></div>
+
+        <div class="container" style="text-align: center;">
+            <p class="text-micro fade-in delay-100">No Cameras • No Crews • No Retakes</p>
+            <h1 class="text-display fade-in delay-200" style="margin: 1rem 0;">
+                Bring Your Brand to Life<br>with AI Avatars
+            </h1>
+            <p class="text-subhead fade-in delay-300" style="max-width: 800px; margin: 0 auto 1rem auto; color: #fff;">
+                Ultra-Realistic Digital Presenters. Authentic Communication. Limitless Scale.
+            </p>
+             <p class="text-subhead fade-in delay-500" style="max-width: 600px; margin: 0 auto 3rem auto; font-size: 1.1rem; opacity: 0.8;">
+                Transform how your brand communicates with lifelike digital presenters who speak, move, and perform flawlessly—every single time.
+            </p>
+            <div class="fade-in delay-500">
+                <a href="#experience" class="btn-primary">Experience StudioX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: REALISM MOMENT -->
+    <section id="realism" class="section-fullscreen" style="height: auto; min-height: 100vh;">
+        <div class="split-screen">
+            <!-- Left: Human -->
+            <div class="split-panel">
+                <!-- Real Human Portrait -->
+                <img src="assets/images/real_human_portrait.png" alt="Real Presenter">
+                <div class="split-label">Real Human</div>
+            </div>
+            
+            <!-- Right: AI Avatar -->
+            <div class="split-panel">
+                <!-- Using video for the AI side to show motion -->
+                <video autoplay muted loop playsinline>
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+                <div class="split-label">AI Avatar</div>
+            </div>
+
+            <!-- Center Overlay Text -->
+            <div class="realism-overlay">
+                <p class="realism-text">Impossibly Realistic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: WHY STUDIOX -->
+    <section id="intro" class="intro-section" style="flex-direction: column; text-align: left; align-items: flex-start;">
+        <div class="abstract-bg"></div>
+        <div class="container">
+            <h2 class="text-headline fade-in" style="margin-bottom: var(--spacing-lg);">Why StudioX AI Avatars?</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+                <div class="fade-in delay-100">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Impossibly Realistic</h3>
+                    <p style="color: var(--color-text-muted);">Your avatar doesn't just read—it performs. Natural gestures, emotional inflection, perfect lip-sync. Choose from our diverse library or create a custom avatar.</p>
+                </div>
+                
+                <div class="fade-in delay-200">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Scale Production</h3>
+                    <p style="color: var(--color-text-muted);">Create as many videos as you need. Marketing campaigns, training, product demos—all produced at the speed of typing.</p>
+                </div>
+
+                <div class="fade-in delay-300">
+                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Brand Consistency</h3>
+                    <p style="color: var(--color-text-muted);">No more coordinating crews or lighting. Your AI avatar is always on-brand, always available, always camera-ready.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: INTRODUCING ELARA -->
+    <section class="elara-section">
+        <div class="elara-content">
+            <div class="elara-text-content fade-in">
+                <span class="elara-badge">Coming Soon</span>
+                <h2 class="elara-title">Meet Elara.</h2>
+                <h3 class="text-headline" style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">The Next Generation of AI Identity.</h3>
+                <p class="elara-desc">
+                    Our most advanced digital human yet. Hyper-detailed textures, micro-expressions, and adaptive emotive response. Elara isn't just an avatar; she's a presence.
+                </p>
+                <a href="#notify" class="btn-primary">Join the Waitlist</a>
+            </div>
+            <div class="elara-image-wrapper fade-in delay-200">
+                <img src="assets/images/elara_avatar.png" alt="Elara AI Avatar" class="elara-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: AVATAR VIDEO GALLERY -->
+    <section id="gallery" class="gallery-section">
+        <div class="gallery-header">
+            <h2 class="text-headline">Visual Solutions</h2>
+        </div>
+        
+        <div class="gallery-track">
+            <!-- Item 1 -->
+            <div class="gallery-item">
+                <video muted loop playsinline poster="assets/images/thumb_product_demo.png">
+                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-content">
+                    <span class="gallery-category">Sales</span>
+                    <h3 class="gallery-title">Product Demo</h3>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="gallery-item">
+                <video muted loop playsinline poster="assets/images/thumb_ceo_office.png">
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-content">
+                    <span class="gallery-category">Corporate</span>
+                    <h3 class="gallery-title">CEO Announcement</h3>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="gallery-item">
+                <video muted loop playsinline poster="assets/images/thumb_training_modern.png">
+                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-content">
+                    <span class="gallery-category">L&D</span>
+                    <h3 class="gallery-title">Training Video</h3>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="gallery-item">
+                <video muted loop playsinline poster="assets/images/thumb_healthcare_modern.png">
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+                <div class="gallery-content">
+                    <span class="gallery-category">Health</span>
+                    <h3 class="gallery-title">Healthcare Exp.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: GLOBAL SCALE -->
+    <section class="scale-section">
+        <img src="assets/images/global_network_bg.png" alt="World Map" class="map-bg">
+        <div class="scale-content container">
+            <h2 class="text-display" style="margin-bottom: 1rem;">One Message.<br><span class="text-gradient">40+ Languages.</span></h2>
+            <p class="text-subhead" style="margin-bottom: 2rem;">Reach global audiences without hiring translators. Native-level fluency in every language.</p>
+            <div style="font-size: 4rem; font-weight: 700; color: var(--color-accent);">Global</div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: USE CASE SCENES (REDESIGN: SPLIT CARD) -->
+    <div class="use-case-wrapper">
+        <!-- Scene 1: Marketing & Sales -->
+        <section class="use-case-panel">
+            <div class="use-case-bg-blur">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="use-case-grid">
+                <!-- Left: Text -->
+                <div class="use-case-text-col fade-in">
+                    <span class="use-case-label">Marketing & Sales</span>
+                    <h2 class="text-headline">Launch Campaigns Faster</h2>
+                    <p>Product launches, social media content, and ad campaigns generated in minutes.</p>
+                </div>
+                <!-- Right: Video Card -->
+                <div class="use-case-card-col fade-in delay-200">
+                    <div class="use-case-video-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/sarah video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 2: Learning & Development -->
+        <section class="use-case-panel">
+            <div class="use-case-bg-blur">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="use-case-grid">
+                <!-- Left: Text -->
+                <div class="use-case-text-col fade-in">
+                    <span class="use-case-label">Learning & Development</span>
+                    <h2 class="text-headline">Engaging Training</h2>
+                    <p>Onboarding modules, compliance courses, and tutorials that employees actually watch.</p>
+                </div>
+                <!-- Right: Video Card -->
+                <div class="use-case-card-col fade-in delay-200">
+                    <div class="use-case-video-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 3: Corporate Comms -->
+        <section class="use-case-panel">
+            <div class="use-case-bg-blur">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="use-case-grid">
+                <!-- Left: Text -->
+                <div class="use-case-text-col fade-in">
+                    <span class="use-case-label">Corporate Comms</span>
+                    <h2 class="text-headline">Executive Updates</h2>
+                    <p>Deliver company updates and internal announcements with a consistent personal touch.</p>
+                </div>
+                <!-- Right: Video Card -->
+                <div class="use-case-card-col fade-in delay-200">
+                    <div class="use-case-video-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/sarah video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 4: Customer Experience -->
+        <section class="use-case-panel">
+            <div class="use-case-bg-blur">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="use-case-grid">
+                <!-- Left: Text -->
+                <div class="use-case-text-col fade-in">
+                    <span class="use-case-label">Customer Experience</span>
+                    <h2 class="text-headline">Personalized Support</h2>
+                    <p>FAQ explainers, walkthrough guides, and personalized video responses.</p>
+                </div>
+                <!-- Right: Video Card -->
+                <div class="use-case-card-col fade-in delay-200">
+                    <div class="use-case-video-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scene 5: Healthcare & Finance -->
+        <section class="use-case-panel">
+            <div class="use-case-bg-blur">
+                <video autoplay muted loop playsinline>
+                    <source src="assets/sarah video.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="use-case-grid">
+                <!-- Left: Text -->
+                <div class="use-case-text-col fade-in">
+                    <span class="use-case-label">Healthcare & Finance</span>
+                    <h2 class="text-headline">Trust & Clarity</h2>
+                    <p>Patient education and financial briefings delivered with empathy and precision.</p>
+                </div>
+                <!-- Right: Video Card -->
+                <div class="use-case-card-col fade-in delay-200">
+                    <div class="use-case-video-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="assets/sarah video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SECTION 7: HOW IT WORKS -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="text-headline">From Concept to Completion in <span class="text-gradient">3 Steps</span></h2>
+            <p class="text-subhead" style="margin-top: 1rem;">10× faster than traditional video production.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card fade-in delay-100">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Write Your Script</h3>
+                    <p style="color: var(--color-text-muted);">Simply type your text or paste existing content directly into our editor.</p>
+                </div>
+                <div class="step-card fade-in delay-200">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">Select Your Avatar</h3>
+                    <p style="color: var(--color-text-muted);">Choose a studio avatar or customize your own digital twin.</p>
+                </div>
+                <div class="step-card fade-in delay-300">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Generate & Download</h3>
+                    <p style="color: var(--color-text-muted);">Get a full HD video ready in minutes. No rendering farms required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8: RESULTS -->
+    <section class="results-section">
+        <div class="container" style="width: 100%; text-align: center; margin-bottom: 3rem;">
+            <h2 class="text-headline" style="color: #fff;">Real Results, Real ROI</h2>
+        </div>
+        <div class="result-item">
+            <span class="result-number">Weeks</span>
+            <span class="result-label">of Content in Hours</span>
+        </div>
+        <div class="result-item">
+            <span class="result-number">0%</span>
+            <span class="result-label">Production Hassle</span>
+        </div>
+        <div class="result-item">
+            <span class="result-number">Zero</span>
+            <span class="result-label">Reshoots Needed</span>
+        </div>
+    </section>
+
+    <!-- SECTION 9: FINAL CTA -->
+    <section class="cta-section">
+        <!-- Background Avatar looking at camera -->
+        <div class="cta-avatar-bg">
+            <img src="assets/images/elara_avatar.png" alt="StudioX Avatar">
+        </div>
+        
+        <div class="cta-content container">
+            <h2 class="text-display" style="margin-bottom: 2rem;">Ready to Transform Your Video Strategy?</h2>
+            <p class="text-subhead" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join forward-thinking brands who are already creating faster, scaling smarter, and engaging deeper.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#" class="btn-primary" style="background: var(--color-accent); color: #000; border-color: var(--color-accent);">Create Your First Avatar</a>
+                <a href="#" class="btn-primary">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <span class="footer-logo">StudioX</span>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Enterprise</a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">&copy; 2026 StudioX AI. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                observer.observe(el);
+            });
+            
+            // Also animate result numbers when in view
+            const numberObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeIn 1s forwards';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.result-item').forEach(el => {
+                el.style.opacity = '0';
+                numberObserver.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio X AI</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+  <link rel="apple-touch-icon" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+
+  <!-- Aggressive Youtube Preloading for Other Pages -->
+  <link rel="preconnect" href="https://www.youtube.com">
+  <link rel="preconnect" href="https://www.google.com">
+  <link rel="preconnect" href="https://googleads.g.doubleclick.net">
+  <link rel="preconnect" href="https://static.doubleclick.net">
+  <!-- Optimize R2 CDN connection -->
+  <link rel="preconnect" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev">
+  <!-- Preload LCP Poster Image -->
+  <link rel="preload" as="image" href="assets/images/Video_Moment.jpg">
+
+  <!-- Prefetch Banner Documents (Service, About) -->
+  <link rel="prefetch"
+    href="https://www.youtube.com/embed/COJfofg3Bw8?si=9_QB3cz6SFFpQrUH&autoplay=1&mute=1&controls=0&loop=1&playlist=COJfofg3Bw8&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&enablejsapi=1"
+    as="document">
+  <link rel="prefetch"
+    href="https://www.youtube.com/embed/WdV3yTMun2Q?si=TW9UFFTD3RZ7YoXt&autoplay=1&mute=1&controls=0&loop=1&playlist=WdV3yTMun2Q&playsinline=1&enablejsapi=1&rel=0"
+    as="document">
+
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #000 !important;
+      visibility: visible !important;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"
+    media="print" onload="this.media='all'">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Video Banner -->
+  <section class="video-banner" id="hero-section">
+    <!-- Optimized R2 Video Banner -->
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/images/Video_Moment.jpg"
+      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; width: auto; height: auto; object-fit: cover; z-index: 0;">
+      <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/studioxaim.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="video-overlay">
+      <div class="video-content"></div>
+    </div>
+  </section>
+
+
+  <!-- AI Capabilities Section -->
+  <section class="ai-capabilities-section">
+    <div class="container">
+      <h2 class="section-title">Cinematic, AI-enhanced video that sells</h2>
+      <p class="section-subtitle"><b>We</b> transform brand stories into
+        scroll-stopping films, YouTube content, learning explainers, and realistic AI avatars crafted for performance
+        and scale.</p>
+
+      <!-- Feature 1: Left Video, Right Content -->
+      <div class="feature-row">
+        <div class="feature-video-wrapper">
+          <!-- Background Video -->
+          <video class="background-video" autoplay loop muted playsinline preload="metadata">
+            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/brand.mp4" type="video/mp4">
+          </video>
+          <div class="video-card-overlay"></div>
+          <span class="ai-badge">*AI-generated video</span>
+        </div>
+        <div class="feature-content service-feature-content">
+          <h2 class="service-feature-heading">Brand Video Production</h2>
+          <p class="service-feature-desc">Cinematic brand films that captivate and convert perfect for launches,
+            awareness, and high-performance ads.</p>
+          <div class="row g-3 service-feature-lists">
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>Concept Development</li>
+                <li>Scriptwriting</li>
+                <li>Professional Voiceover</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>Licensed Music</li>
+                <li>Multi-format Delivery</li>
+                <li>Fast Revisions</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" onclick="openModal(); return false;" class="btn-service-cta mt-3">
+            Book a Free Call
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 2: Right Video, Left Content -->
+      <div class="feature-row reverse">
+        <div class="feature-video-wrapper">
+          <!-- Background Video -->
+          <video class="background-video" autoplay loop muted playsinline preload="metadata">
+            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/yt.mp4" type="video/mp4">
+          </video>
+          <div class="video-card-overlay"></div>
+          <span class="ai-badge">*AI-generated video</span>
+        </div>
+        <div class="feature-content service-feature-content">
+          <h2 class="service-feature-heading">YouTube Video Production</h2>
+          <p class="service-feature-desc">Channel-ready stories with scroll-stopping hooks, tight edits, and thumbnails
+            that win clicks.</p>
+          <div class="row g-3 service-feature-lists">
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>Hook Development</li>
+                <li>Script Polish</li>
+                <li>Thumbnail Design</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>SEO Titles</li>
+                <li>Multi-format Delivery</li>
+                <li>Captions/Subtitles</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#video-showcase-section" class="btn-service-cta mt-3">
+            See YouTube Work
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Feature 3: Left Video, Right Content -->
+      <div class="feature-row">
+        <div class="feature-video-wrapper">
+          <!-- Background Video -->
+          <video class="background-video" autoplay loop muted playsinline preload="metadata">
+            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rose.mp4" type="video/mp4">
+          </video>
+          <div class="video-card-overlay"></div>
+          <span class="ai-badge">*AI-generated video</span>
+        </div>
+        <div class="feature-content service-feature-content">
+          <h2 class="service-feature-heading">AI Avatar Creation</h2>
+          <p class="service-feature-desc">Realistic multilingual avatars that present, explain, and sell at scale.</p>
+          <div class="row g-3 service-feature-lists">
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>Custom Avatar Design</li>
+                <li>Script && Voiceover</li>
+                <li>60+ Languages</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>On-brand Backgrounds</li>
+                <li>Subtitles Included</li>
+                <li>Bulk Video Generation</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#ai-art-portfolio" class="btn-service-cta mt-3">
+            See Avatar Samples
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="feature-row reverse">
+        <div class="feature-video-wrapper">
+          <!-- Background Video -->
+          <video class="background-video" autoplay loop muted playsinline preload="metadata">
+            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/learning.mp4" type="video/mp4">
+          </video>
+          <div class="video-card-overlay"></div>
+          <span class="ai-badge">*AI-generated video</span>
+
+          <!-- Video Controls -->
+
+        </div>
+        <div class="feature-content service-feature-content">
+          <h2 class="service-feature-heading">Learning Video Production</h2>
+          <p class="service-feature-desc">We turn complex ideas into clear, engaging learning experiences for e-learning
+            and corporate training.</p>
+          <div class="row g-3 service-feature-lists">
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>Content Simplification</li>
+                <li>Motion Graphics</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="feature-list service-feature-list">
+                <li>On-screen Guides</li>
+                <li>Optional Assessments</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" onclick="openModal(); return false;" class="btn-service-cta mt-3">
+            Discuss Your Needs
+            <i class="bi bi-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- our videos section -->
+  <section class="video-showcase-section" id="video-showcase-section">
+    <!-- Main Title -->
+    <h2 class="showcase-title">Our Creative Showcase</h2>
+
+    <!-- Video Grid (2 columns, 2 rows) -->
+    <div class="video-grid large-grid" id="video-showcase-section">
+      <!-- 1. Family AI -->
+      <div class="video-card" id="card-family">
+        <video id="video-family" class="showcase-video" playsinline loop muted preload="metadata">
+          <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/family-ai.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-overlay">
+          <div class="custom-video-controls native-style">
+            <div class="controls-row">
+              <button class="control-btn-icon play-pause-btn" data-video="video-family" aria-label="Play/Pause">
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-pause-fill" style="display: none;"></i>
+              </button>
+              <div class="time-display">
+                <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+              </div>
+              <div class="spacer"></div>
+              <button class="control-btn-icon mute-btn" data-video="video-family" aria-label="Mute/Unmute">
+                <i class="bi bi-volume-mute-fill" style="display: none;"></i> <!-- Default muted -->
+                <i class="bi bi-volume-up-fill"></i> <!-- Show unmuted icon initially? No, video is muted -->
+              </button>
+              <button class="control-btn-icon fullscreen-btn" data-video="video-family" aria-label="Fullscreen">
+                <i class="bi bi-fullscreen"></i>
+              </button>
+            </div>
+            <div class="progress-container" data-video="video-family">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Crocodile -->
+      <div class="video-card" id="card-crocodile">
+        <video id="video-crocodile" class="showcase-video" playsinline loop muted preload="metadata">
+          <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/crocodile.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-overlay">
+          <div class="custom-video-controls native-style">
+            <div class="controls-row">
+              <button class="control-btn-icon play-pause-btn" data-video="video-crocodile" aria-label="Play/Pause">
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-pause-fill" style="display: none;"></i>
+              </button>
+              <div class="time-display">
+                <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+              </div>
+              <div class="spacer"></div>
+              <button class="control-btn-icon mute-btn" data-video="video-crocodile" aria-label="Mute/Unmute">
+                <i class="bi bi-volume-mute-fill" style="display: none;"></i>
+                <i class="bi bi-volume-up-fill"></i>
+              </button>
+              <button class="control-btn-icon fullscreen-btn" data-video="video-crocodile" aria-label="Fullscreen">
+                <i class="bi bi-fullscreen"></i>
+              </button>
+            </div>
+            <div class="progress-container" data-video="video-crocodile">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Marco -->
+      <div class="video-card" id="card-marco">
+        <video id="video-marco" class="showcase-video" playsinline loop muted preload="metadata">
+          <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/marco.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-overlay">
+          <div class="custom-video-controls native-style">
+            <div class="controls-row">
+              <button class="control-btn-icon play-pause-btn" data-video="video-marco" aria-label="Play/Pause">
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-pause-fill" style="display: none;"></i>
+              </button>
+              <div class="time-display">
+                <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+              </div>
+              <div class="spacer"></div>
+              <button class="control-btn-icon mute-btn" data-video="video-marco" aria-label="Mute/Unmute">
+                <i class="bi bi-volume-mute-fill" style="display: none;"></i>
+                <i class="bi bi-volume-up-fill"></i>
+              </button>
+              <button class="control-btn-icon fullscreen-btn" data-video="video-marco" aria-label="Fullscreen">
+                <i class="bi bi-fullscreen"></i>
+              </button>
+            </div>
+            <div class="progress-container" data-video="video-marco">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Value Homes -->
+      <div class="video-card" id="card-value">
+        <video id="video-value" class="showcase-video" playsinline loop muted preload="metadata">
+          <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Value%20Homes.mp4" type="video/mp4">
+        </video>
+        <div class="video-card-overlay">
+          <div class="custom-video-controls native-style">
+            <div class="controls-row">
+              <button class="control-btn-icon play-pause-btn" data-video="video-value" aria-label="Play/Pause">
+                <i class="bi bi-play-fill"></i>
+                <i class="bi bi-pause-fill" style="display: none;"></i>
+              </button>
+              <div class="time-display">
+                <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+              </div>
+              <div class="spacer"></div>
+              <button class="control-btn-icon mute-btn" data-video="video-value" aria-label="Mute/Unmute">
+                <i class="bi bi-volume-mute-fill" style="display: none;"></i>
+                <i class="bi bi-volume-up-fill"></i>
+              </button>
+              <button class="control-btn-icon fullscreen-btn" data-video="video-value" aria-label="Fullscreen">
+                <i class="bi bi-fullscreen"></i>
+              </button>
+            </div>
+            <div class="progress-container" data-video="video-value">
+              <div class="progress-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <section id="ai-art-portfolio">
+    <h2 class="showcase-title">AI Art Portfolio</h2>
+    <div class="gallery">
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/girldance.jpg" alt="a forest after an apocalypse"
+        loading="lazy">
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/avathar.png" alt="dancing girl ai generated"
+        loading="lazy">
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/car.png" alt="a waterfall and many rocks"
+        loading="lazy">
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/space%20ai.png"
+        alt="a waterfall, a lot of trees and a great view from the sky" loading="lazy">
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/whale_image_1024x1024.png"
+        alt="fish ai generated image" loading="lazy">
+
+      <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/heartai.jpg" alt="ai generated heart image"
+        loading="lazy">
+
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/js/common.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/index.js" defer></script>
+</body>
+
+</html>
