@@ -775,6 +775,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     background: linear-gradient(to right, #fff, #888);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -919,9 +920,101 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+
 .modal-footer-text {
     text-align: center;
     color: #666;
     font-size: 0.8rem;
     margin-top: 1rem;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+@media (max-width: 768px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+        --spacing-xxl: 4rem;
+    }
+
+    .text-display {
+        font-size: 2.5rem; /* Ensure readable on small screens */
+    }
+
+    .text-headline {
+        font-size: 2rem;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 1rem !important; /* Override inline style */
+        background: rgba(0,0,0,0.8); /* readable bg */
+        backdrop-filter: blur(10px);
+    }
+
+    .logo-img {
+        height: 50px; /* Smaller logo */
+    }
+
+    .btn-primary {
+        padding: 0.8rem 1.2rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* Split Screen - Stack panels */
+    .split-screen {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .split-panel {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .split-label {
+        font-size: 1.5rem;
+        bottom: 1rem;
+        left: 1rem;
+        opacity: 1; /* Always visible on mobile */
+        transform: none;
+    }
+
+    /* Intro Section */
+    .intro-section {
+        padding: var(--spacing-xl) var(--spacing-md);
+        min-height: auto;
+    }
+
+    .intro-text {
+        font-size: 2rem;
+    }
+
+    /* Gallery - Carousel effect */
+    .gallery-item {
+        flex: 0 0 85vw; /* Wider items */
+        height: 50vh;
+    }
+
+    /* Results */
+    .results-section {
+        flex-direction: column;
+        gap: var(--spacing-xl);
+    }
+    
+    .result-number {
+        font-size: 3.5rem;
+    }
+    
+    /* FAQ Detail */
+    details {
+        padding: 1rem;
+    }
+    
+    summary {
+        font-size: 1rem;
+    }
 }
