@@ -23,6 +23,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            opacity: 0; /* Hidden initially to prevent FOUC */
+            visibility: hidden;
         }
 
         /* 
@@ -200,7 +202,8 @@
         // Thinner Unit: 160 + 20 = 180
         const unitW = 180; 
         const patternW = unitW * videoSources.length; 
-        const numUnits = 20;
+        const numUnits = 12; /* Reduced from 20 for performance */
+        const startDelay = 0.5; /* delay in seconds before animation starts */
         
         const track1 = document.getElementById('track-1');
         const track2 = document.getElementById('track-2');
@@ -257,7 +260,14 @@
         }
 
         // --- ANIMATION ---
-        const tl = gsap.timeline();
+        
+        // Wait for everything to load
+        window.addEventListener('load', () => {
+            
+            // Show container
+            gsap.set(".main-lockup", { autoAlpha: 1 });
+
+            const tl = gsap.timeline({ delay: startDelay });
         
         // 1. ENTRANCE
         tl.from(".logo-scaler", { scale: 0, opacity:0, duration: 1.5, ease:"power4.out"}, "start");
@@ -290,6 +300,8 @@
                 modifiers: { x: gsap.utils.unitize(x => parseFloat(x) % patternW) }
             });
         }
+
+        }); /* End window.addEventListener */
 
         gsap.to("#pulse-ring", { scale: 1.5, opacity: 0, duration: 2, repeat: -1 });
 

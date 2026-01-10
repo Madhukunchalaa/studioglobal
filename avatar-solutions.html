@@ -68,55 +68,42 @@
     </section>
 
     <!-- SECTION 2: REALISM MOMENT -->
-    <section id="realism" class="section-fullscreen" style="height: auto; min-height: 100vh;">
-        <div class="split-screen">
-            <!-- Left: Human -->
-            <div class="split-panel">
-                <!-- Real Human Portrait -->
-                <img src="assets/images/real_human_portrait.png" alt="Real Presenter">
-                <div class="split-label">Real Human</div>
-            </div>
-            
-            <!-- Right: AI Avatar -->
-            <div class="split-panel">
-                <!-- Using video for the AI side to show motion -->
-                <video autoplay muted loop playsinline>
-                    <source src="assets/sarah video.mp4" type="video/mp4">
-                </video>
-                <div class="split-label">AI Avatar</div>
-            </div>
-
-            <!-- Center Overlay Text -->
-            <div class="realism-overlay">
-                <p class="realism-text">Impossibly Realistic</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: WHY STUDIOX -->
-    <section id="intro" class="intro-section" style="flex-direction: column; text-align: left; align-items: flex-start;">
-        <div class="abstract-bg"></div>
+    <section id="realism" class="section-fullscreen" style="height: auto; min-height: 80vh; display: flex; align-items: center; background: #050505;">
         <div class="container">
-            <h2 class="text-headline fade-in" style="margin-bottom: var(--spacing-lg);">Why Studio<span style="color: var(--color-accent);">X</span> AI Avatars?</h2>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
-                <div class="fade-in delay-100">
-                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Impossibly Realistic</h3>
-                    <p style="color: var(--color-text-muted);">Your avatar doesn't just readâ€”it performs. Natural gestures, emotional inflection, perfect lip-sync. Choose from our diverse library or create a custom avatar.</p>
+             <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;">
+                <!-- Left: Content -->
+                <div class="fade-in">
+                    <h2 class="text-headline" style="margin-bottom: 2rem;">Why Studio<span style="color: var(--color-accent);">X</span> AI Avatars?</h2>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Impossibly Realistic</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Your avatar doesn't just read—it performs. Natural gestures, emotional inflection, perfect lip-sync. Choose from our diverse library or create a custom avatar.</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Done-For-You Production</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">We handle the entire production process. You provide the script, our team produces the video. No learning curve, no software to manage.</p>
+                    </div>
+
+                    <div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Brand Consistency</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">No more coordinating crews or lighting. Your AI avatar is always on-brand, always available, always camera-ready.</p>
+                    </div>
                 </div>
                 
-                <div class="fade-in delay-200">
-                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Done-For-You Production</h3>
-                    <p style="color: var(--color-text-muted);">We handle the entire production process. You provide the script, our team produces the video. No learning curve, no software to manage.</p>
-                </div>
-
-                <div class="fade-in delay-300">
-                    <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 1rem; color: var(--color-accent);">Brand Consistency</h3>
-                    <p style="color: var(--color-text-muted);">No more coordinating crews or lighting. Your AI avatar is always on-brand, always available, always camera-ready.</p>
+                <!-- Right: Video -->
+                <div class="fade-in delay-200" style="display: flex; justify-content: center;">
+                     <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(0, 210, 255, 0.1); border: 1px solid rgba(255,255,255,0.1); max-width: 400px; width: 100%;">
+                        <video autoplay muted loop playsinline style="width: 100%; display: block;">
+                            <source src="assets/sarah video.mp4" type="video/mp4">
+                        </video>
+                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- SECTION: INTRODUCING ELARA -->
     <section class="elara-section">
