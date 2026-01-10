@@ -68,9 +68,28 @@
     </section>
 
     <!-- SECTION 2: REALISM MOMENT -->
-    <section id="realism" class="section-fullscreen" style="height: auto; min-height: 80vh; display: flex; align-items: center; background: #050505;">
+    <style>
+        .realism-grid {
+            display: grid; 
+            grid-template-columns: 1.5fr 1fr; 
+            gap: 4rem; 
+            align-items: center;
+        }
+        @media (max-width: 900px) {
+            .realism-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            /* Center the video on mobile */
+            .realism-grid > div:last-child {
+                justify-content: center;
+            }
+        }
+    </style>
+    <section id="realism" class="section-fullscreen" style="height: auto; min-height: 80vh; display: flex; align-items: center; background: #050505; padding: 4rem 0;">
         <div class="container">
-             <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; align-items: center;">
+             <div class="realism-grid">
                 <!-- Left: Content -->
                 <div class="fade-in">
                     <h2 class="text-headline" style="margin-bottom: 2rem;">Why Studio<span style="color: var(--color-accent);">X</span> AI Avatars?</h2>
