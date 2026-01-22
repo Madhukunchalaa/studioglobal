@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Production LP Content | Studio X AI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Colors matching avatar-landing.css */
+            --accent-gold: #cfaa6e; /* Keeping gold for specific accents if needed, but primary headings will switch */
+            --accent-blue: #00D2FF; /* Updated to match avatar-solutions */
+            --dark-base: #050505; /* Updated match */
+            --dark-surface: #121212;
+            --console-bg: #151515;
+            --text-muted: #888888; /* Updated match */
+            
+            /* Typography */
+            --font-primary: 'Inter', sans-serif;
+            --font-secondary: 'Playfair Display', serif;
+        }
+
+        body {
+            background-color: var(--dark-base);
+            color: #fff;
+            font-family: var(--font-primary);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-primary);
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+
+        .serif-italic {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Navbar */
+        .landing-nav {
+            padding: 24px 0;
+            position: absolute;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+        }
+
+        .nav-logo img {
+            height: 68px;
+        }
+
+        .btn-primary-custom {
+            background: #fff;
+            color: #000;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid #fff;
+        }
+
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: #fff;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: #000;
+            color: #fff;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            /* Curved Bottom divider */
+            clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
+        }
+
+        .hero-bg-wrapper {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            margin: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-tag {
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 0.85rem;
+            color: var(--accent-gold);
+            margin-bottom: 24px;
+            font-weight: 600;
+            background: rgba(207, 170, 110, 0.08);
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid rgba(207, 170, 110, 0.15);
+            border-radius: 4px;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 4.5rem); /* Matching hero-headline */
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+        }
+
+        .hero-desc {
+            font-size: clamp(1.2rem, 2vw, 1.8rem); /* Matching text-subhead roughly */
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 650px;
+            font-weight: 300;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        /* Matching text-headline from avatar-solutions */
+        .text-headline, .display-5, .display-3 {
+            font-size: clamp(2rem, 4vw, 3rem) !important;
+            font-weight: 700;
+        }
+
+        /* --- CINEMATIC CONSOLE FORM --- */
+        .console-container {
+            background: rgba(21, 21, 21, 0.85); /* Matte Charcoal */
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .console-container::after {
+            /* Elegant light sweep effect */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            animation: consoleSweep 8s infinite linear;
+            pointer-events: none;
+        }
+
+        @keyframes consoleSweep {
+            0% { left: -100%; }
+            50% { left: 200%; }
+            100% { left: 200%; }
+        }
+
+        .console-header {
+            background: rgba(0,0,0,0.3);
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* Timeline Progress */
+        .timeline-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 0;
+        }
+
+        .timeline-track {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .timeline-fill {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 0%; /* JS will update this */
+            height: 2px;
+            background: var(--accent-blue);
+            transform: translateY(-50%);
+            z-index: 2;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 10px var(--accent-blue);
+        }
+
+        .timeline-steps {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .t-step {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255,255,255,0.4);
+            background: var(--console-bg);
+            padding: 0 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        
+        .t-step.active {
+            color: var(--accent-blue);
+            text-shadow: 0 0 8px rgba(0, 136, 204, 0.4);
+        }
+
+        .console-body {
+            padding: 30px;
+        }
+
+        /* Cinematic Inputs */
+        .console-group {
+            margin-bottom: 24px;
+            opacity: 0; /* JS Fade in */
+            transform: translateY(10px);
+            animation: fadeSlideIn 0.6s forwards;
+        }
+
+        @keyframes fadeSlideIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .console-label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            margin-bottom: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 500;
+        }
+
+        .console-input {
+            width: 100%;
+            background: rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #fff;
+            padding: 14px 16px;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .console-input:focus {
+            outline: none;
+            background: rgba(0,0,0,0.4);
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 15px rgba(0, 136, 204, 0.2); /* Studio light glow */
+            transform: scale(1.01);
+        }
+
+        .console-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cfaa6e' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 16px center;
+        }
+
+        .btn-console {
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-blue), #006fa6);
+            color: #fff;
+            font-weight: 700;
+            padding: 18px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-console::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-console:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.4);
+        }
+
+        .btn-console:hover::before {
+            left: 100%;
+        }
+
+        .console-subtext {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        /* --- END CONSOLE FORM --- */
+
+
+        /* Features */
+        .feature-section {
+            padding: 120px 0;
+            background: var(--dark-base);
+            overflow: hidden;
+        }
+
+        .feature-img-container {
+            position: relative;
+            height: 100%;
+            min-height: 400px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .feature-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .feature-row:hover .feature-img {
+            transform: scale(1.03);
+        }
+
+        .feature-text {
+            padding: 40px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        .feature-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .feature-p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 120px 0;
+            background: var(--dark-surface);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.08);
+            padding: 40px 30px;
+            height: 100%;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .service-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+        
+        .service-card h4 {
+            color: #fff;
+            font-weight: 700;
+        }
+
+        /* Location */
+        .location-section {
+            padding: 100px 0;
+            background: url('assets/images/feature_team.png') no-repeat center center/cover;
+            position: relative;
+        }
+        
+        .location-overlay {
+            background: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0.4) 100%);
+            position: absolute;
+            inset: 0;
+        }
+
+        .location-card {
+            position: relative;
+            background: rgba(10, 10, 10, 0.8);
+            padding: 30px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1; /* For stacking context */
+        }
+
+        /* Robust Gradient Border */
+        .location-card::before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: 14px;
+            padding: 2px; 
+            background: linear-gradient(45deg, var(--accent-gold), #333, var(--accent-blue));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        
+        @supports not (mask-composite: exclude) {
+            .location-card { border: 2px solid var(--accent-gold); }
+            .location-card:nth-child(2) { border-color: var(--accent-blue); }
+            .location-card::before { display: none; }
+        }
+
+        .location-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+        .location-card:hover::before { opacity: 1; background: linear-gradient(45deg, var(--accent-gold), #fff, var(--accent-blue)); }
+
+        /* Animations */
+        .stunning-glow { animation: glow-pulse 3s infinite alternate; }
+        @keyframes glow-pulse {
+            0% { box-shadow: 0 0 10px rgba(0, 136, 204, 0.2); }
+            100% { box-shadow: 0 0 30px rgba(0, 136, 204, 0.6), 0 0 60px rgba(0, 136, 204, 0.3); }
+        }
+
+        /* Footer */
+        .footer {
+            background: #000;
+            padding: 80px 0 40px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        ul.hero-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        
+        ul.hero-list li {
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        /* Animated Underline */
+        .gold-underline {
+            position: relative;
+            padding-bottom: 20px;
+            display: inline-block;
+        }
+
+        .gold-underline::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: var(--accent-gold);
+            transition: width 0.8s ease-out;
+            box-shadow: 0 0 10px rgba(207, 170, 110, 0.5);
+        }
+
+        .gold-underline.text-start::after {
+            left: 0;
+            transform: none;
+        }
+
+        .gold-underline.in-view::after {
+            width: 80px;
+        }
+
+        /* Process Section styles */
+        .process-section {
+            padding: 100px 0;
+            background: var(--dark-base);
+        }
+        .process-step {
+            position: relative;
+            padding: 30px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.02);
+            height: 100%;
+            transition: 0.3s;
+        }
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+        .step-num {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            opacity: 0.3;
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="landing-nav" data-aos="fade-down" data-aos-duration="1000">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="nav-logo">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png" alt="Studio X AI">
+            </a>
+            <a href="#quote" class="btn-primary-custom">Book a Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-section">
+        <div class="hero-bg-wrapper">
+            <!-- Video Background -->
+            <video autoplay muted loop playsinline class="hero-bg">
+                <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/brand.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-overlay"></div>
+        
+        <div class="container hero-content">
+            <div class="row align-items-top">
+                <div class="col-lg-7 text-white" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-tag">StudioXAI – Video Production Services</div>
+                    <h1 class="hero-title">
+                        Professional & Custom Video Production Services
+                    </h1>
+                    <p class="hero-desc">
+                        High-quality, custom video production solutions designed to meet your specific business, corporate, and commercial requirements.
+                    </p>
+                    
+                    <a href="#quote" class="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold" style="background: var(--accent-blue); border: none;">Ready to Start Your Video Project?</a>
+                </div>
+
+                <div class="col-lg-5 ps-lg-5 mt-5 mt-lg-0" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    
+                    <!-- Right Column: Built Around Your Business Needs -->
+                    <div class="p-5 rounded-4 position-relative overflow-hidden" style="border: 1px solid rgba(255,255,255,0.08);">
+                        <!-- Video Background -->
+                        <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+                            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6; filter: blur(3px);">
+                                <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Portfolio.mp4" type="video/mp4">
+                            </video>
+                            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+                        </div>
+
+                        <div class="position-relative z-1">
+                            <h2 class="h3 fw-bold text-white mb-4">Video Production Built Around Your Business Needs</h2>
+                            <p class="text-white-50 mb-4" style="font-size: 1.1rem; line-height: 1.6;">
+                                We offer professional and custom video production services for businesses looking for reliable, high-quality visual content. Every project is planned and produced based on your objectives, audience, and usage requirements.
+                            </p>
+                            <div class="d-flex gap-3 align-items-center">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-camera-reels text-warning"></i>
+                                    <span class="small fw-bold">Custom Shoots</span>
+                                </div>
+                                <div class="bg-white opacity-25" style="width: 1px; height: 20px;"></div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-film text-info"></i>
+                                    <span class="small fw-bold">Pro Editing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Video Production Services -->
+    <section class="feature-section">
+        <div class="container">
+            <div class="row align-items-center feature-row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="feature-img-container">
+                        <video autoplay muted loop playsinline class="feature-img">
+                            <source src="assets/sarah video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1" data-aos="fade-left">
+                    <div class="feature-text">
+                        <h2 class="feature-title gold-underline">Custom Video Production Services</h2>
+                        <p class="feature-p">
+                            Our custom video production services are designed for businesses that need tailored video solutions rather than one-size-fits-all content. Each video is planned, filmed, and produced to align with your specific goals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold gold-underline">Our Video Production Services Include</h2>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Custom Video Production</h4>
+                        <p class="text-white-50">Tailored video solutions for businesses (Business, Corporate, Commercial).</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Corporate Video Production</h4>
+                        <p class="text-white-50">Professional videos to showcase your company culture and values.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Commercial & Advertising</h4>
+                        <p class="text-white-50">High-impact videos designed to capture attention and convert.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Company Profile Videos</h4>
+                        <p class="text-white-50">Tell your story and build trust with stakeholders.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Product & Service Videos</h4>
+                        <p class="text-white-50">Demonstrate your offerings clearly and effectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Training & Internal Comms</h4>
+                        <p class="text-white-50">Efficient educational content for employees and teams.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card h-100">
+                        <h4 class="mb-3">Social Media Videos</h4>
+                        <p class="text-white-50">Engaging content optimized for digital platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Production Process -->
+    <section class="process-section position-relative overflow-hidden">
+        <!-- Video Background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; opacity: 0.3;">
+                <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/marco.mp4" type="video/mp4">
+            </video>
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75"></div>
+        </div>
+
+        <div class="container position-relative z-1">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="display-5 fw-bold gold-underline">Video Production Process</h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4 col-xl" data-aos="fade-up" data-aos-delay="100">
+                    <div class="process-step" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="step-num">01</div>
+                        <h3 class="step-title">Discovery & Consultation</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl" data-aos="fade-up" data-aos-delay="200">
+                    <div class="process-step" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="step-num">02</div>
+                        <h3 class="step-title">Planning & Pre-Production</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl" data-aos="fade-up" data-aos-delay="300">
+                    <div class="process-step" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="step-num">03</div>
+                        <h3 class="step-title">Production & Filming</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl" data-aos="fade-up" data-aos-delay="400">
+                    <div class="process-step" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="step-num">04</div>
+                        <h3 class="step-title">Post-Production</h3>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl" data-aos="fade-up" data-aos-delay="500">
+                    <div class="process-step" style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px);">
+                        <div class="step-num">05</div>
+                        <h3 class="step-title">Review & Final Delivery</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose StudioXAI -->
+    <section class="location-section position-relative overflow-hidden">
+        <!-- Video Background -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 z-0">
+            <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Value%20Homes.mp4" type="video/mp4">
+            </video>
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(90deg, #0a0a0a 0%, rgba(10,10,10,0.8) 50%, rgba(10,10,10,0.6) 100%);"></div>
+        </div>
+        
+        <div class="container position-relative z-2">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="pe-lg-5">
+                        <span class="text-uppercase fw-bold text-white-50 border-bottom border-warning pb-1 mb-3 d-inline-block">StudioXAI Advantage</span>
+                        <h2 class="display-3 fw-bold mb-4 gold-underline text-start">Why Choose StudioXAI</h2>
+                        <p class="fs-5 text-white-50 mb-4 me-lg-4">
+                            We deliver premium video production tailored to your business goals.
+                        </p>
+                        <a href="#quote" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold" style="background: var(--accent-gold); border: none; color: #000;">
+                            Start Your Project
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7">
+                    <div class="p-5 rounded-4" style="background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                        <ul class="list-unstyled d-flex flex-column gap-4 mb-0" data-aos="fade-left">
+                            <li class="d-flex gap-3 align-items-center">
+                                <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                <h5 class="fw-bold mb-0">Fully customised video production solutions</h5>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center">
+                                <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                <h5 class="fw-bold mb-0">Experienced production team</h5>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center">
+                                <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                <h5 class="fw-bold mb-0">Transparent communication</h5>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center">
+                                <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                <h5 class="fw-bold mb-0">High-quality delivery</h5>
+                            </li>
+                            <li class="d-flex gap-3 align-items-center">
+                                <i class="bi bi-check-circle-fill fs-4 text-warning"></i>
+                                <h5 class="fw-bold mb-0">Scalable services</h5>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h3 class="mb-3 display-6 fw-bold gold-underline" data-aos="fade-up">Ready to Start Your Video Project?</h3>
+            <p class="fs-5 text-white-50 mb-4" data-aos="fade-up" data-aos-delay="100">Discuss your video requirements with our team and get a tailored video production solution built around your needs.</p>
+            <a href="#quote" class="btn-primary-custom px-5 py-3 d-inline-block mb-5" data-aos="zoom-in" data-aos-delay="200">DISCUSS YOUR PROJECT</a>
+            
+            <div class="row border-top border-white-10 pt-5 mt-4">
+                <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+                    <div class="mb-2"><i class="bi bi-geo-alt me-2"></i> Sprout - Modern Profound Techpark, Kondapur, Hyderabad</div>
+                    <div class="mb-2"><i class="bi bi-phone me-2"></i> <a href="tel:+61410393639" class="text-white text-decoration-none">+61 410 393 639</a> <span class="mx-2">|</span> <a href="tel:+916281939690" class="text-white text-decoration-none">+91 628 193 9690</a></div>
+                    <div class="mb-2"><i class="bi bi-envelope me-2"></i> <a href="mailto:contact@studioxai.global" class="text-white text-decoration-none">contact@studioxai.global</a></div>
+                </div>
+                <div class="col-md-6 text-center text-md-end text-white-50">
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Init Scroll Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Heading Underline Observer
+        const headingObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.gold-underline').forEach(el => {
+            headingObserver.observe(el);
+        });
+    </script>
+</body>
+</html>

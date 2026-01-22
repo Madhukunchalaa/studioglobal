@@ -1,24 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17855979754"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'AW-17855979754');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudioX AI Avatars | The Future of Digital Identity</title>
+    <title>StudioXAI Avatars | The Future of Digital Identity</title>
     <meta name="description" content="Ultra-realistic AI avatars for enterprise. Indistinguishable from reality.">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://studiox.ai/avatar-solutions.html">
-    <meta property="og:title" content="StudioX AI Avatars | The Future of Digital Identity">
+    <meta property="og:title" content="StudioXAI Avatars | The Future of Digital Identity">
     <meta property="og:description" content="Ultra-realistic AI avatars for enterprise. Indistinguishable from reality. Scale your video production with digital humans.">
     <meta property="og:image" content="https://studiox.ai/assets/images/real_human_portrait.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://studiox.ai/avatar-solutions.html">
-    <meta property="twitter:title" content="StudioX AI Avatars | The Future of Digital Identity">
+    <meta property="twitter:title" content="StudioXAI Avatars | The Future of Digital Identity">
     <meta property="twitter:description" content="Ultra-realistic AI avatars for enterprise. Indistinguishable from reality.">
     <meta property="twitter:image" content="https://studiox.ai/assets/images/real_human_portrait.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+    <link rel="apple-touch-icon" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,36 +47,46 @@
 <body>
 
     <!-- Navigation -->
-    <nav style="position: fixed; top: 0; left: 0; width: 100%; padding: 2rem; z-index: 100; display: flex; justify-content: space-between; align-items: center; mix-blend-mode: difference;">
+    <nav class="main-nav">
         <a href="index.html" class="logo-link">
-            <img src="assets/images/logo.png" alt="StudioX Logo" class="logo-img">
+            <img src="assets/images/logo.png" alt="StudioXAI Logo" class="logo-img">
         </a>
-        <a href="#quote" class="btn-primary" style="border: none; font-size: 0.8rem; padding: 0.6rem 1.2rem;">Get a Custom Quote</a>
+        <a href="#quote" class="btn-primary">Get a Custom Quote</a>
     </nav>
+    
+    <!-- Navbar Scroll Script -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
 
     <!-- SECTION 1: HERO (Opening Scene) -->
     <section class="section-fullscreen">
         <!-- Background Video -->
-        <video autoplay muted loop playsinline class="video-bg" style="opacity: 0.5;">
+        <video muted loop autoplay playsinline preload="auto" class="video-bg" style="opacity: 0.5;">
             <!-- Using existing video asset -->
-            <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
+                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Rosa_Video%201.mp4" type="video/mp4">
         </video>
         
         <!-- Film Grain Overlay Effect (CSS only) -->
-        <div class="overlay" style="background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,1) 100%);"></div>
+        <!-- <div class="overlay" style="background: linear-gradient(180deg, rgba(5,5,5,0.3) 0%, rgba(5,5,5,1) 100%);"></div> -->
 
         <div class="container" style="text-align: center;">
-            <p class="text-micro fade-in delay-100">No Cameras &bull; No Crews &bull; No Retakes</p>
-            <h1 class="text-display fade-in delay-200" style="margin: 1rem 0; font-size: clamp(2.5rem, 5vw, 4rem);">
-                Custom AI Avatar Videos <br> Produced for <span style="color: var(--color-accent);">Your Brand</span> Ready to Use.
+            <p class="text-micro fade-in delay-100">One digital presenter Infinite videos No crews, no calendars, no limits</p>
+            <h1 class="hero-headline fade-in delay-200" style="margin: 1rem 0;">
+                Custom AI Avatar Videos <br> Produced for <span style="color: var(--color-accent);">Your Brand</span> Ready to Use
             </h1>
-            <p class="text-micro fade-in delay-200">Ultra-Realistic Digital Presenters. Authentic Communication. Limitless Scale</p>
+            <p class="text-micro fade-in delay-200" style="text-transform: uppercase;">Ultra-Realistic Digital Presenters Authentic Communication Limitless Scale</p>
             
-             <p class="text-subhead fade-in delay-500" style="max-width: 600px; margin: 0 auto 3rem auto; font-size: 1.1rem; opacity: 0.8;">
-                Transform how your brand communicates with lifelike digital presenters regarding marketing, training, or internal comms.
-            </p>
+              
             <div class="fade-in delay-500" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#quote" class="btn-primary" style="background: transparent; border: 1px solid var(--color-accent); color: var(--color-accent); padding: 0.8rem 1.5rem; font-size: 0.85rem;">Get a Custom Quote</a>
+                <a href="#quote" class="btn-primary">Get a Custom Quote</a>
             </div>
         </div>
     </section>
@@ -92,29 +116,29 @@
              <div class="realism-grid">
                 <!-- Left: Content -->
                 <div class="fade-in">
-                    <h2 class="text-headline" style="margin-bottom: 2rem;">Why Studio<span style="color: var(--color-accent);">X</span> AI Avatars?</h2>
+                    <h2 class="text-headline" style="margin-bottom: 2rem;">Why Studio<span style="color: var(--color-accent);">X</span>AI Avatars?</h2>
                     
                     <div style="margin-bottom: 2rem;">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Impossibly Realistic</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Your avatar doesn't just read it performs. Natural gestures, emotional inflection, perfect lip-sync. Choose from our diverse library or create a custom avatar.</p>
+                        <h3 style="font-family: var(--font-serif); margin-bottom: 0.5rem; color: var(--color-accent);"><span style="margin-right: 10px;">&rarr;</span>Impossibly Realistic</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">Your avatar doesn't just read it performs Natural gestures, emotional inflection, perfect lip-sync Choose from our diverse library or create a custom avatar</p>
                     </div>
                     
                     <div style="margin-bottom: 2rem;">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Done-For-You Production</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">We handle the entire production process. You provide the script, our team produces the video. No learning curve, no software to manage.</p>
+                        <h3 style="font-family: var(--font-serif); margin-bottom: 0.5rem; color: var(--color-accent);"><span style="margin-right: 10px;">&rarr;</span>Done-For-You Production</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">We handle the entire production process You provide the script, our team produces the video No learning curve, no software to manage</p>
                     </div>
 
                     <div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-accent);">Brand Consistency</h3>
-                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">No more coordinating crews or lighting. Your AI avatar is always on-brand, always available, always camera-ready.</p>
+                        <h3 style="font-family: var(--font-serif); margin-bottom: 0.5rem; color: var(--color-accent);"><span style="margin-right: 10px;">&rarr;</span>Brand Consistency</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 1rem;">No more coordinating crews or lighting Your AI avatar is always on-brand, always available, always camera-ready</p>
                     </div>
                 </div>
                 
                 <!-- Right: Video -->
                 <div class="fade-in delay-200" style="display: flex; justify-content: center;">
-                     <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(0, 210, 255, 0.1); border: 1px solid rgba(255,255,255,0.1); max-width: 400px; width: 100%;">
-                        <video autoplay muted loop playsinline style="width: 100%; display: block;">
-                            <source src="assets/sarah video.mp4" type="video/mp4">
+                     <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(0, 210, 255, 0.1); border: 1px solid rgba(255,255,255,0.1); max-width: 500px; width: 100%; height: 500px;">
+                        <video preload="none" muted loop playsinline style="width: 100%; display: block;">
+                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/sarah%20video.mp4" type="video/mp4">
                         </video>
                      </div>
                 </div>
@@ -128,14 +152,14 @@
     <section class="elara-section">
         <div class="elara-content">
             <div class="elara-image-wrapper fade-in delay-200">
-                <img src="assets/images/elara_avatar.png" alt="Elara AI Avatar" class="elara-image">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/maya_avatar.png" alt="Maya AI Avatar" class="elara-image">
             </div>
             <div class="elara-text-content fade-in">
                 <span class="elara-badge">Coming Soon</span>
-                <h2 class="elara-title">Meet Elara.</h2>
-                <h3 class="text-headline" style="font-size: 2rem; margin-bottom: 1rem; color: #fff;">The Next Generation of AI Identity.</h3>
+                <h2 class="elara-title">Meet <span style="color: var(--color-accent)!important; -webkit-text-fill-color: var(--color-accent)!important;"> Maya</span> </h2>
+                <h3 class="text-headline" style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--color-accent);">The Next Generation of AI Identity</h3>
                 <p class="elara-desc">
-                    Our most advanced digital human yet. Hyper-detailed textures, micro-expressions, and adaptive emotive response. Elara isn't just an avatar; she's a presence.
+                    Our most advanced digital human yet Hyper-detailed textures, micro-expressions, and adaptive emotive response Maya isn't just an avatar; she's a presence
                 </p>
                 <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                     <a href="#demo" class="btn-primary" style="padding: 0.8rem 1.5rem; font-size: 0.8rem;">Request a Demo</a>
@@ -145,53 +169,65 @@
     </section>
 
     <!-- SECTION 4: AVATAR VIDEO GALLERY -->
+    <!-- SECTION 4: AVATAR VIDEO GALLERY -->
     <section id="gallery" class="gallery-section">
         <div class="gallery-header">
-            <h2 class="text-headline">Visual Solutions</h2>
+            <h2 class="text-headline">Avatar <span style="color: var(--color-accent);">Gallery</span></h2>
         </div>
         
         <div class="gallery-track">
-            <!-- Item 1 -->
             <div class="gallery-item">
-                <video muted loop playsinline poster="assets/images/thumb_product_demo.png">
-                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
-                </video>
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/carter_avatar.png" alt="Carter">
                 <div class="gallery-content">
-                    <span class="gallery-category">Sales</span>
-                    <h3 class="gallery-title">Product Demo</h3>
+                    <h3 class="gallery-title">Carter</h3>
                 </div>
             </div>
-
-            <!-- Item 2 -->
             <div class="gallery-item">
-                <video muted loop playsinline poster="assets/images/thumb_ceo_office.png">
-                    <source src="assets/sarah video.mp4" type="video/mp4">
-                </video>
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rosa_avatar.png" alt="Rosa Avatar">
                 <div class="gallery-content">
-                    <span class="gallery-category">Corporate</span>
-                    <h3 class="gallery-title">CEO Announcement</h3>
+                    <h3 class="gallery-title">Rosa</h3>
                 </div>
             </div>
-
-            <!-- Item 3 -->
             <div class="gallery-item">
-                <video muted loop playsinline poster="assets/images/thumb_training_modern.png">
-                    <source src="assets/Rosa_Video 1.mp4" type="video/mp4">
-                </video>
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/leo.png" alt="Featured Avatar">
                 <div class="gallery-content">
-                    <span class="gallery-category">L&D</span>
-                    <h3 class="gallery-title">Training Video</h3>
+                    <h3 class="gallery-title">Leo</h3>
                 </div>
             </div>
-
-            <!-- Item 4 -->
             <div class="gallery-item">
-                <video muted loop playsinline poster="assets/images/thumb_healthcare_modern.png">
-                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/sarah%20video.mp4" type="video/mp4">
-                </video>
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/maya_avatar.png" alt="Maya Avatar">
                 <div class="gallery-content">
-                    <span class="gallery-category">Health</span>
-                    <h3 class="gallery-title">Healthcare Exp.</h3>
+                    <h3 class="gallery-title">Maya</h3>
+                </div>
+            </div>
+             <div class="gallery-item">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/jake_avatar.jpg" alt="Jake">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">Jake</h3>
+                </div>
+            </div>
+             <div class="gallery-item">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/pallavi_avatar.jpg" alt="Pallavi">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">Pallavi</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/sarah_avatar.png" alt="Sarah Avatar">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">Sarah</h3>
+                </div>
+            </div>
+             <div class="gallery-item">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/cleo_avatar.jpg" alt="Cleo">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">Cleo</h3>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/ellara.png" alt="Elara">
+                <div class="gallery-content">
+                    <h3 class="gallery-title">Elara</h3>
                 </div>
             </div>
         </div>
@@ -199,11 +235,11 @@
 
     <!-- SECTION 5: GLOBAL SCALE -->
     <section class="scale-section">
-        <img src="assets/images/global_network_bg.png" alt="World Map" class="map-bg">
+        <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/global_network_bg.png" alt="World Map" class="map-bg">
         <div class="scale-content container">
-            <h2 class="text-display" style="margin-bottom: 1rem;">One Message.<br><span class="text-gradient">60+ Languages & Accents.</span></h2>
-            <p class="text-subhead" style="margin-bottom: 2rem;">Reach global audiences without hiring translators. Native-level fluency in every language for Marketing, Training, and Internal Comms.</p>
-            <div style="font-size: 4rem; font-weight: 700; color: var(--color-accent);">Global</div>
+            <h2 class="text-headline" style="margin-bottom: 1rem;">One Message<br>60<span style="color: var(--color-accent);">+</span> <span style="color: var(--color-accent);">Languages & Accents</span></h2>
+            <p class="text-subhead" style="margin-bottom: 2rem;">Reach global audiences without hiring translators Native-level fluency in every language for Marketing, Training, and Internal Comms</p>
+          
         </div>
     </section>
 
@@ -212,7 +248,7 @@
         <!-- Scene 1: Marketing & Sales -->
         <section class="use-case-panel">
             <div class="use-case-bg-blur">
-                <video autoplay muted loop playsinline>
+                <video preload="none" muted loop playsinline>
                     <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Stop%20Scrolling_Fnl_2%20(1).mp4" type="video/mp4">
                 </video>
             </div>
@@ -222,7 +258,7 @@
                 <div class="use-case-text-col fade-in">
                     <span class="use-case-label">Marketing & Sales</span>
                     <h2 class="text-headline">Launch Campaigns Faster</h2>
-                    <p>Product launches, social media content, and ad campaigns generated in minutes.</p>
+                    <p>One avatar, endless variations Test 10 ad versions, localize for 20 markets, refresh creative weekly — all without booking a single shoot</p>
                     <div style="margin-top: 2rem;">
                         <a href="#consultation" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Schedule a Consultation</a>
                     </div>
@@ -230,7 +266,7 @@
                 <!-- Right: Video Card -->
                 <div class="use-case-card-col fade-in delay-200">
                     <div class="use-case-video-card">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" muted loop playsinline>
                             <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Stop%20Scrolling_Fnl_2%20(1).mp4" type="video/mp4">
                         </video>
                     </div>
@@ -241,7 +277,7 @@
         <!-- Scene 2: Learning & Development -->
         <section class="use-case-panel">
             <div class="use-case-bg-blur">
-                <video autoplay muted loop playsinline>
+                <video preload="none" muted loop playsinline>
                     <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/sarah%20video.mp4" type="video/mp4">
                 </video>
             </div>
@@ -250,8 +286,8 @@
                 <!-- Left: Text -->
                 <div class="use-case-text-col fade-in">
                     <span class="use-case-label">Learning & Development</span>
-                    <h2 class="text-headline">Training videos</h2>
-                    <p>Onboarding modules, compliance courses, and tutorials that employees actually watch.</p>
+                    <h2 class="text-headline">Training That Scales</h2>
+                    <p>Update compliance content in minutes, not months Your avatar trainer never leaves, never retires, and speaks every language your workforce does</p>
                     <div style="margin-top: 2rem;">
                          <a href="#demo" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request a Demo</a>
                     </div>
@@ -259,7 +295,7 @@
                 <!-- Right: Video Card -->
                 <div class="use-case-card-col fade-in delay-200">
                     <div class="use-case-video-card">
-                        <video autoplay muted loop playsinline>
+                        <video preload="none" muted loop playsinline>
                             <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/sarah%20video.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -267,42 +303,15 @@
             </div>
         </section>
 
-        <!-- Scene: Corporate Communications -->
-        <section class="use-case-panel">
-            <div class="use-case-bg-blur">
-                <video autoplay muted loop playsinline>
-                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Ilink%20Male.mov" type="video/mp4">
-                </video>
-            </div>
-            
-            <div class="use-case-grid">
-                <!-- Left: Text -->
-                <div class="use-case-text-col fade-in">
-                    <span class="use-case-label">Corporate Communications</span>
-                    <h2 class="text-headline">Corporate Communications</h2>
-                    <p>Executive messages, company updates, internal announcements, culture videos</p>
-                    <div style="margin-top: 2rem;">
-                        <a href="#consultation" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Schedule a Consultation</a>
-                    </div>
-                </div>
-                <!-- Right: Video Card -->
-                <div class="use-case-card-col fade-in delay-200">
-                    <div class="use-case-video-card">
-                        <video autoplay muted loop playsinline>
-                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Ilink%20Male.mov" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
 
 
         <!-- Scene 4: Customer Experience -->
         <section class="use-case-panel">
             <div class="use-case-bg-blur">
-                <video autoplay muted loop playsinline>
-                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rose.mp4" type="video/mp4">
+                <video preload="none" muted loop playsinline>
+                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rosa-xmass.mp4" type="video/mp4">
                 </video>
             </div>
             
@@ -310,8 +319,8 @@
                 <!-- Left: Text -->
                 <div class="use-case-text-col fade-in">
                     <span class="use-case-label">Customer Experience</span>
-                    <h2 class="text-headline">Personalized Support</h2>
-                    <p>FAQ explainers, walkthrough guides, and personalized video responses.</p>
+                    <h2 class="text-headline">Personal at Scale</h2>
+                    <p>One avatar answers thousands simultaneously Product walkthroughs, FAQ responses, and onboarding guides that feel 1-on-1 but cost like automation</p>
                     <div style="margin-top: 2rem;">
                         <a href="#consultation" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Schedule a Consultation</a>
                     </div>
@@ -319,8 +328,8 @@
                 <!-- Right: Video Card -->
                 <div class="use-case-card-col fade-in delay-200">
                     <div class="use-case-video-card">
-                        <video autoplay muted loop playsinline>
-                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rose.mp4" type="video/mp4">
+                        <video preload="none" muted loop playsinline>
+                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/rosa-xmass.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -332,8 +341,8 @@
         <!-- Scene 5: Healthcare & Finance -->
         <section class="use-case-panel">
             <div class="use-case-bg-blur">
-                <video autoplay muted loop playsinline>
-                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Ilink%20Male.mov" type="video/mp4">
+                <video preload="none" muted loop playsinline>
+                    <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/xmas.mp4" type="video/mp4">
                 </video>
             </div>
             
@@ -341,8 +350,8 @@
                 <!-- Left: Text -->
                 <div class="use-case-text-col fade-in">
                     <span class="use-case-label">Healthcare & Finance</span>
-                    <h2 class="text-headline">Trust & Clarity</h2>
-                    <p>Patient education and financial briefings delivered with empathy and precision.</p>
+                    <h2 class="text-headline">Consistency Builds Trust</h2>
+                    <p>Same friendly face explains every procedure, every policy, every time Patients and clients get reliable, compliant communication without human error or variance</p>
                     <div style="margin-top: 2rem;">
                          <a href="#demo" class="btn-primary" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request a Demo</a>
                     </div>
@@ -350,8 +359,8 @@
                 <!-- Right: Video Card -->
                 <div class="use-case-card-col fade-in delay-200">
                     <div class="use-case-video-card">
-                        <video autoplay muted loop playsinline>
-                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Ilink%20Male.mov" type="video/mp4">
+                        <video preload="none" muted loop playsinline>
+                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/xmas.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -362,24 +371,24 @@
     <!-- SECTION 7: HOW IT WORKS -->
     <section class="steps-section">
         <div class="container">
-            <h2 class="text-headline">From Concept to Completion in <span class="text-gradient">3 Steps</span></h2>
-            <p class="text-subhead" style="margin-top: 1rem;">10A faster than traditional video production.</p>
+            <h2 class="text-headline">From Concept to <span style="color: var(--color-accent);">Completion in 3 Steps</span></h2>
+            <p class="text-subhead" style="margin-top: 1rem;">10X faster than traditional video production</p>
             
             <div class="steps-grid">
                 <div class="step-card fade-in delay-100">
-                    <span class="step-number">01</span>
+                    <img src="assets/images/step1.png" alt="Step 1 Icon" class="step-icon" style="height: 60px; margin: 0 auto 1.5rem auto; display: block;">
                     <h3 class="step-title">Share Your Message</h3>
-                    <p style="color: var(--color-text-muted);">Send us your script or key points. We can help refine your message for maximum impact.</p>
+                    <p style="color: var(--color-text-muted);">Send us your script or key points We can help refine your message for maximum impact</p>
                 </div>
                 <div class="step-card fade-in delay-200">
-                    <span class="step-number">02</span>
+                    <img src="assets/images/step2.png" alt="Step 2 Icon" class="step-icon" style="height: 60px; margin: 0 auto 1.5rem auto; display: block;">
                     <h3 class="step-title">We Produce</h3>
-                    <p style="color: var(--color-text-muted);">Our expert team produces the video using our advanced AI avatars, ensuring perfect delivery and brand alignment.</p>
+                    <p style="color: var(--color-text-muted);">Our expert team produces the video using our advanced AI avatars, ensuring perfect delivery and brand alignment</p>
                 </div>
                 <div class="step-card fade-in delay-300">
-                    <span class="step-number">03</span>
+                    <img src="assets/images/step3.png" alt="Step 3 Icon" class="step-icon" style="height: 60px; margin: 0 auto 1.5rem auto; display: block;">
                     <h3 class="step-title">Ready to Use</h3>
-                    <p style="color: var(--color-text-muted);">Receive your high-definition video, ready for immediate distribution across your channels.</p>
+                    <p style="color: var(--color-text-muted);">Receive your high-definition video, ready for immediate distribution across your channels</p>
                 </div>
             </div>
             
@@ -391,53 +400,56 @@
 
     <!-- SECTION 8: RESULTS -->
     <section class="results-section">
-        <div class="container" style="width: 100%; text-align: center; margin-bottom: 3rem;">
-            <h2 class="text-headline" style="color: #fff;">Real Results, Real ROI</h2>
+        <div class="container" style="width: 100%; text-align: center; margin-bottom: 4rem;">
+            <h2 class="text-headline" style="color: #fff;">Real Results, <span style="color: var(--color-accent);">Real ROI</span></h2>
         </div>
-        <div class="result-item">
-            <span class="result-number">Weeks</span>
-            <span class="result-label">of Content in Hours</span>
-        </div>
-        <div class="result-item">
-            <span class="result-number">0%</span>
-            <span class="result-label">Production Hassle</span>
-        </div>
-        <div class="result-item">
-            <span class="result-number">Zero</span>
-            <span class="result-label">Reshoots Needed</span>
+        
+        <div class="results-grid container">
+            <div class="result-item fade-in delay-100">
+                <span class="result-number">Weeks</span>
+                <span class="result-label">of Content in Hours</span>
+            </div>
+            <div class="result-item fade-in delay-200">
+                <span class="result-number" id="production-hassle-number">0%</span>
+                <span class="result-label">Production Hassle</span>
+            </div>
+            <div class="result-item fade-in delay-300">
+                <span class="result-number">Zero</span>
+                <span class="result-label">Reshoots Needed</span>
+            </div>
         </div>
     </section>
 
     <!-- SECTION 9: TRUST & TESTIMONIALS (NEW) -->
     <section class="testimonials-section" style="padding: 4rem 1rem; background: #0a0a0a;">
         <div class="container">
-            <h2 class="text-headline" style="text-align: center; margin-bottom: 2rem;">Trusted by Industry Leaders</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <h2 class="text-headline" style="text-align: center; margin-bottom: 2rem;">Trusted by <span style="color: var(--color-accent);">Industry Leaders</span></h2>
+            <div class="testimonials-grid">
                 <!-- Testimonial 1 -->
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"They transformed our 3D designs into desire."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div>
-                            <h4 style="margin: 0; font-size: 0.9rem;">The Marque Club</h4>
-                        </div>
+                <div class="testimonial-card fade-in delay-100">
+                    <span class="quote-icon">&ldquo;</span>
+                    <p class="testimonial-text">They transformed our 3D designs into desire. The realism is uncanny and the impact on our engagement metrics was immediate.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">The Marque Club</span>
+                        <span class="author-role">Creative Direction</span>
                     </div>
                 </div>
                 <!-- Testimonial 2 -->
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Our pub's soul captured perfectlyâ€”now we're Williamstown's heartbeat."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div>
-                            <h4 style="margin: 0; font-size: 0.9rem;">Rose of Australia</h4>
-                        </div>
+                <div class="testimonial-card fade-in delay-200">
+                    <span class="quote-icon">&ldquo;</span>
+                    <p class="testimonial-text">Our pub's soul captured perfectly—now we're Williamstown's heartbeat. StudioX brings a cinematic quality that others just can't match.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Rose of Australia</span>
+                        <span class="author-role">Hospitality Group</span>
                     </div>
                 </div>
                 <!-- Testimonial 3 -->
-                <div style="background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <p style="font-style: italic; margin-bottom: 1.5rem;">"Surgical precision, cinematically captured."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div>
-                            <h4 style="margin: 0; font-size: 0.9rem;">Clinic Golden Proportions</h4>
-                        </div>
+                <div class="testimonial-card fade-in delay-300">
+                    <span class="quote-icon">&ldquo;</span>
+                    <p class="testimonial-text">Surgical precision, cinematically captured. It allows us to communicate complex procedures with clarity and elegance.</p>
+                    <div class="testimonial-author">
+                        <span class="author-name">Clinic Golden Proportions</span>
+                        <span class="author-role">Medical Aesthetics</span>
                     </div>
                 </div>
             </div>
@@ -449,7 +461,7 @@
     <!-- SECTION 10: FAQ (NEW - with accordion) -->
     <section class="faq-section" style="padding: 4rem 1rem;">
         <div class="container" style="max-width: 800px;">
-            <h2 class="text-headline" style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+            <h2 class="text-headline" style="text-align: center; margin-bottom: 2rem;">Frequently <span style="color: var(--color-accent);">Asked Questions</span></h2>
             
             <style>
                 details {
@@ -504,28 +516,28 @@
             <details>
                 <summary>How customizable are the avatars?</summary>
                 <div class="faq-answer">
-                    We offer a diverse library of studio avatars. For enterprise clients, we can create a custom digital twin of your spokesperson, capturing their exact likeness and voice.
+                    We offer a diverse library of studio avatars For enterprise clients, we can create a custom digital twin of your spokesperson, capturing their exact likeness and voice
                 </div>
             </details>
             
             <details>
                 <summary>What is the turnaround time?</summary>
                 <div class="faq-answer">
-                    Standard projects are typically delivered within 48-72 hours after script approval. Complex custom avatar creation typically takes 2-3 weeks.
+                    Standard projects are typically delivered within 48-72 hours after script approval Complex custom avatar creation typically takes 2-3 weeks
                 </div>
             </details>
 
             <details>
                 <summary>Can you handle multiple languages?</summary>
                 <div class="faq-answer">
-                    Yes, we support over 60 languages and accents with native-level fluency. You can translate a single video into multiple languages instantly.
+                    Yes, we support over 60 languages and accents with native-level fluency You can translate a single video into multiple languages instantly
                 </div>
             </details>
 
              <details>
                 <summary>Do I need to act or film anything?</summary>
                 <div class="faq-answer">
-                    Not at all. That's the beauty of Studio<span style="color: var(--color-accent);">X</span>. We handle all the production. You just provide the script or the message you want to convey.
+                    Not at all That's the beauty of Studio<span style="color: var(--color-accent);">X</span>AI We handle all the production You just provide the script or the message you want to convey
                 </div>
             </details>
         </div>
@@ -539,9 +551,9 @@
         </div>
         
         <div class="cta-content container">
-            <h2 class="text-display" style="margin-bottom: 2rem;">Ready to Transform Your Video Strategy?</h2>
+            <h2 class="text-headline" style="margin-bottom: 2rem;">Ready to Transform Your <span style="color: var(--color-accent);">Video Strategy?</span></h2>
             <p class="text-subhead" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                Join forward-thinking brands who are already creating faster, scaling smarter, and engaging deeper.
+                Join forward-thinking brands who are already creating faster, scaling smarter, and engaging deeper
             </p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="#consultation" class="btn-primary" style="background: transparent; border: 1px solid #fff;">Schedule a Consultation</a>
@@ -551,13 +563,13 @@
 
     <!-- FOOTER -->
     <footer class="site-footer">
-        <span class="footer-logo">Studio<span style="color: var(--color-accent);">X</span> AI</span>
+        <img src="assets/images/logo.png" alt="StudioXAI" class="footer-logo-img-small">
         <div class="footer-links">
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="#">Terms</a>
             <a href="#">Enterprise</a>
         </div>
-        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">&copy; 2026 Studio<span style="color: var(--color-accent);">X</span> AI. All rights reserved.</p>
+        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">&copy; 2026 Studio<span style="color: var(--color-accent);">X</span>AI All rights reserved</p>
     </footer>
 
     <!-- Scroll Animation Script -->
@@ -602,36 +614,122 @@
                 el.style.opacity = '0';
                 numberObserver.observe(el);
             });
+            
+            // Result Number Animation (Countdown 50% -> 0%)
+            const resultSection = document.querySelector('.results-section');
+            const hassleNumber = document.getElementById('production-hassle-number');
+            
+            if (resultSection && hassleNumber) {
+                const resultObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            let start = 50;
+                            const end = 0;
+                            const duration = 2000; // 2 seconds
+                            const range = start - end;
+                            const increment = end > start ? 1 : -1;
+                            const stepTime = Math.abs(Math.floor(duration / range));
+                            
+                            const timer = setInterval(() => {
+                                start += increment;
+                                hassleNumber.textContent = start + "%";
+                                if (start == end) {
+                                    clearInterval(timer);
+                                }
+                            }, stepTime);
+                            
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                resultObserver.observe(resultSection);
+            }
+
+            // Video Warmup Strategy (Preload before view)
+            const warmupObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const video = entry.target;
+                        if (video.preload === 'none') {
+                            video.preload = 'auto'; // Start buffering
+                        }
+                        observer.unobserve(video); // Only need to trigger once
+                    }
+                });
+            }, { rootMargin: '200px 0px 200px 0px' }); // Look 200px ahead/behind
+
+            // Video Lazy Playback - Only play when in viewport
+            const playObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        // Ensure it's ready to play
+                        if (video.paused) {
+                            video.play().catch(e => console.log('Autoplay prevented:', e));
+                        }
+                    } else {
+                        if (!video.paused) {
+                            video.pause();
+                        }
+                    }
+                });
+            }, { threshold: 0.1 }); 
+            
+            document.querySelectorAll('video').forEach(video => {
+                // Don't apply lazy playing to the Hero video if it's meant to be always on, 
+                // but usually good to pause if scrolled way off. 
+                // However, let's keep consistent behavior.
+                
+                // If it's the hero video (which we just added autoplay to), 
+                // we might want to skip the 'preload=none' check or warmup, 
+                // since we hardcoded preload="auto".
+                if (video.classList.contains('video-bg')) {
+                    // Just observe for play/pause to save resources when scrolled away
+                    playObserver.observe(video);
+                } else {
+                    // For other videos, apply warmup + play/pause
+                    warmupObserver.observe(video);
+                    playObserver.observe(video);
+                }
+            });
         });
     </script>
 </body>
 </html>
 
     <!-- Modal HTML -->
+    <div id="lightbox" class="lightbox-overlay">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <div class="lightbox-content">
+            <img src="" alt="Full Screen View" class="lightbox-image">
+        </div>
+    </div>
+
     <div id="strategyModal" class="modal-overlay">
         <div class="modal-container">
             <button class="modal-close" aria-label="Close">&times;</button>
             <h2 class="modal-title">Get Your Free Strategy Roadmap</h2>
-            <form id="strategyForm" onsubmit="event.preventDefault(); alert('Thank you! We will be in touch shortly.');">
+            <form id="strategyForm" action="avatar.php" method="POST">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="Your Name Here" required>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Your Name Here" required>
                     </div>
                     <div class="form-group">
                         <label for="email" class="form-label">Work Email</label>
-                        <input type="email" id="email" class="form-input" placeholder="Your Email Here" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="Your Email Here" required>
                     </div>
                 </div>
                 
                 <div class="form-group">
                     <label for="phone" class="form-label">Phone / WhatsApp</label>
-                    <input type="tel" id="phone" class="form-input" placeholder="Your Phone Number">
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Your Phone Number">
                 </div>
                 
                 <div class="form-group">
                     <label for="video-need" class="form-label">What video do you need?</label>
-                    <select id="video-need" class="form-select" required>
+                    <select id="video-need" name="service" class="form-select" required>
                         <option value="" disabled selected>Choose an option</option>
                         <option value="brand_film">Brand Film</option>
                         <option value="corporate_training">Corporate Training</option>
@@ -642,7 +740,7 @@
                 </div>
                 
                 <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; background: var(--color-accent); color: #000; border: none;">Get My Free Strategy & Quote &rarr;</button>
-                <p class="modal-footer-text">We'll reply within 24 hours.</p>
+                <p class="modal-footer-text">We'll reply within 24 hours</p>
             </form>
         </div>
     </div>
@@ -685,6 +783,102 @@
                     closeModal();
                 }
             });
+        });
+    </script>
+    <!-- Gallery Auto-Scroll Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.querySelector('.gallery-track');
+            if (!track) return;
+
+            // Lightbox interaction
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = lightbox.querySelector('.lightbox-image');
+            const lightboxClose = lightbox.querySelector('.lightbox-close');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            // Open Lightbox
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                   const img = item.querySelector('img') || item.querySelector('video'); // Handle video posters if needed, assuming img for now based on request
+                   if (img) {
+                       lightboxImg.src = img.src;
+                       lightbox.classList.add('active');
+                       document.body.style.overflow = 'hidden'; // Prevent scrolling
+                   }
+                });
+            });
+
+            // Close Lightbox
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scrolling
+                setTimeout(() => {
+                    lightboxImg.src = ''; // Clear src after fade out
+                }, 300);
+            }
+
+            lightboxClose.addEventListener('click', closeLightbox);
+
+            // Close on background click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+
+            // Disable scroll snap and smooth scrolling for the auto-scroll to work smoothly
+            track.style.scrollSnapType = 'none';
+            track.style.scrollBehavior = 'auto';
+
+            let direction = 1; // 1 = Right, -1 = Left
+            const speed = 1; // Pixels per frame
+            let isPaused = false;
+            let animationId;
+
+            function autoScroll() {
+                if (!isPaused) {
+                    // Check if content is actually scrollable
+                    if (track.scrollWidth <= track.clientWidth) {
+                        // Content fits, no need to scroll
+                        return requestAnimationFrame(autoScroll);
+                    }
+
+                    if (direction === 1) { // Scrolling Right
+                        track.scrollLeft += speed;
+                        // Check if we reached the end (allowing 1px buffer)
+                        if (Math.ceil(track.scrollLeft + track.clientWidth) >= track.scrollWidth) {
+                            direction = -1;
+                        }
+                    } else { // Scrolling Left
+                        track.scrollLeft -= speed;
+                        // Check if we reached the start
+                        if (track.scrollLeft <= 0) {
+                            direction = 1;
+                        }
+                    }
+                }
+                animationId = requestAnimationFrame(autoScroll);
+            }
+
+            // Pause interactions
+            track.addEventListener('mouseenter', () => isPaused = true);
+            track.addEventListener('mouseleave', () => isPaused = false);
+            
+            track.addEventListener('touchstart', () => isPaused = true);
+            track.addEventListener('touchend', () => {
+                setTimeout(() => isPaused = false, 1000);
+            });
+
+            // Start loop
+            animationId = requestAnimationFrame(autoScroll);
         });
     </script>
 </body>

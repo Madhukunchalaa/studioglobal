@@ -1,0 +1,625 @@
+/* StudioX Video Production Styles */
+
+/* SECTION: HOW IT WORKS (STEPS) */
+.steps-section {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    background: url('../images/hero_bg_real.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+}
+
+.steps-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for text readability */
+    z-index: 1;
+}
+
+.steps-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-card {
+    background: rgba(20, 20, 30, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: var(--spacing-xl) var(--spacing-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    text-align: left; /* Better for reading steps */
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-accent);
+    background: rgba(20, 20, 30, 0.8);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.step-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.step-card:hover::after {
+    opacity: 1;
+}
+
+.step-number {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+    display: block;
+    line-height: 1;
+    transition: all 0.3s ease;
+}
+
+.step-card:hover .step-number {
+    -webkit-text-stroke: 1px var(--color-accent);
+    color: rgba(0, 210, 255, 0.1);
+}
+
+.step-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* HERO REDESIGN - CENTERED CINEMATIC */
+.section-fullscreen {
+    position: relative;
+    /* Vignette Overlay */
+    box-shadow: inset 0 0 150px rgba(0,0,0,0.8);
+}
+
+.section-fullscreen::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content-wrapper.centered-hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.hero-title-large {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    line-height: 0.9;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.hero-line-1 {
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem); /* Much smaller, elegant eyebrow text */
+    letter-spacing: 0.3em;
+    color: var(--color-accent);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-line-2 {
+    font-size: clamp(3.5rem, 9vw, 8rem); /* Adjusted max size */
+    color: #fff;
+    display: block;
+    background: linear-gradient(180deg, #fff 30%, rgba(255,255,255,0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    max-width: 600px;
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.btn-text {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-text span {
+    transition: transform 0.3s ease;
+}
+
+.btn-text:hover span {
+    transform: translateX(5px);
+}
+
+.btn-text:hover {
+    color: var(--color-accent);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.mouse {
+    width: 26px;
+    height: 40px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.wheel {
+    width: 2px;
+    height: 6px;
+    background: #fff;
+    border-radius: 2px;
+    animation: scrollWheel 1.5s infinite;
+}
+
+@keyframes scrollWheel {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0; }
+}
+
+/* Mobile Responsive - Hero */
+@media (max-width: 900px) {
+    .hero-content-wrapper.centered-hero {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .hero-line-1 {
+        letter-spacing: 0.1em;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .scroll-indicator {
+        bottom: 5rem;
+    }
+}
+
+/* CINEMATIC SPLIT SECTION */
+.cinematic-split-section {
+    background: #050505;
+    padding: 0; /* Full edge to edge feel if wanted, or retain padding */
+    padding: var(--spacing-xxl) 0;
+    overflow: hidden;
+}
+
+.split-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center; /* Center vertically */
+    gap: 4rem;
+    padding: 0 var(--spacing-lg);
+}
+
+.split-content {
+    flex: 1;
+    padding-left: 3rem; /* Adjusted for right side placement */
+}
+
+.split-visual {
+    flex: 1;
+    height: 600px; /* Tall video */
+    position: relative;
+}
+
+/* Typography & Header */
+.eyebrow {
+    color: var(--color-accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.split-desc {
+    color: rgba(255,255,255,0.7);
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    max-width: 500px;
+}
+
+/* Feature List */
+.feature-list {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.feature-row {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.feature-num {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.3);
+    padding-top: 0.2rem;
+}
+
+.feature-text h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.feature-text p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+/* Video Side */
+.video-container-tall {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    /* Subtle border/glow */
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cinematic-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+}
+
+.visual-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.split-cta {
+    margin-top: 3rem;
+    padding-left: 3rem; /* Align with text, skipping number width approx */
+}
+
+
+@media (max-width: 900px) {
+    .split-container {
+        flex-direction: column;
+        gap: 3rem;
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .split-content {
+        padding-left: 0;
+        text-align: center; /* Center text on mobile */
+    }
+
+    /* Center the feature rows on mobile too? */
+    .feature-list {
+        align-items: flex-start; /* Keep left aligned for readability or center? Let's keep strict left for list */
+        text-align: left; 
+    }
+    
+    .split-visual {
+        width: 100%;
+        height: 400px;
+        order: -1; /* Ensure video is on top */
+    }
+    
+    .split-cta {
+        padding-left: 0;
+        display: flex;
+        justify-content: center; /* Center button */
+    }
+}
+
+/* PHILOSOPHY SECTION (Moved from Inline) */
+.philosophy-section {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: #050505;
+    padding: var(--spacing-xxl) 0;
+}
+
+.realism-grid {
+    display: grid; 
+    grid-template-columns: 1.5fr 1fr; 
+    gap: 4rem; 
+    align-items: center;
+}
+
+.philosophy-desc {
+    color: rgba(255,255,255,0.8);
+    font-size: 1.1rem; 
+    margin-bottom: 2rem; 
+    line-height: 1.6;
+}
+
+.philosophy-video-wrapper {
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 0 50px rgba(0, 210, 255, 0.1); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    max-width: 500px; 
+    width: 100%; 
+    height: 500px;
+    position: relative;
+}
+
+.philosophy-video {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block;
+}
+
+@media (max-width: 900px) {
+    .philosophy-section {
+        padding: var(--spacing-xl) 0;
+        min-height: auto;
+    }
+
+    .realism-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .realism-grid > div:last-child {
+        justify-content: center;
+        display: flex;
+    }
+
+    .philosophy-video-wrapper {
+        height: auto;
+        aspect-ratio: 1/1; /* Square on mobile or video ratio */
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+   .hero-line-2 {
+       font-size: clamp(2.5rem, 10vw, 4rem); /* Smaller on very small screens */
+   }
+   
+   .step-number {
+       font-size: 3rem;
+   }
+   
+   .gallery-item {
+       height: 50vh;
+   }
+}
+
+
+/* =========================================
+   MODAL POPUP STYLES
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: #111;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 500px;
+    padding: 2.5rem;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+    padding: 0;
+}
+
+.close-modal:hover {
+    color: #fff;
+}
+
+.modal-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.modal-header p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+}
+
+.modal-form .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.modal-form input,
+.modal-form select,
+.modal-form textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.modal-form input:focus,
+.modal-form select:focus,
+.modal-form textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.modal-submit {
+    width: 100%;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-submit:hover {
+    background: var(--color-accent);
+    transform: translateY(-2px);
+}
