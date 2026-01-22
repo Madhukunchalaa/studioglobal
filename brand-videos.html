@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Videos & Films | Studio X AI</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/avatar-landing.css">
+    <link rel="stylesheet" href="assets/css/video-production.css">
+    <style>
+        /* Specific Overrides for Brand Videos Page if needed */
+        .hero-title-large {
+            font-size: 3.5rem; /* Slightly adjust for longer title */
+        }
+        @media (max-width: 768px) {
+            .hero-title-large {
+                font-size: 2.5rem;
+            }
+        }
+        
+        /* Service List Styling */
+        .services-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .service-card-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .service-card-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+        }
+        .service-card-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        .service-card-item p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Why Choose List Styling */
+        .feature-simple-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        .feature-simple-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .feature-simple-list li::before {
+            content: "•";
+            color: var(--color-accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
+            margin-left: -1em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <a href="index.html" class="logo-link">
+            <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png" alt="StudioXAI Logo" class="logo-img" style="height: 70px;">
+        </a>
+        <a href="#" onclick="openModal(); return false;" class="btn-primary">Book a Demo</a>
+    </nav>
+    
+    <!-- Navbar Scroll Script -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- SECTION 1: HERO -->
+    <section class="section-fullscreen">
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="video-bg" style="object-fit: cover;">
+            <!-- Reusing a high quality video from previous page, 'brand.mp4' seems fitting -->
+            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/brand.mp4" type="video/mp4">
+        </video> 
+        
+        <!-- Content -->
+        <div class="hero-content-wrapper centered-hero">
+            <h1 class="hero-title-large">
+                <span class="hero-line-1 fade-in">High-Impact</span>
+                <span class="hero-line-2 fade-in delay-200" style="color: var(--color-accent);">Brand Videos & Brand Films</span>
+            </h1>
+            
+            <p class="hero-subtitle fade-in delay-400">
+                Cinematic brand videos and films crafted to communicate your brand story, values, and vision with clarity and emotional impact.
+            </p>
+
+            <div class="hero-actions fade-in delay-500">
+                 <a href="#" onclick="openModal(); return false;" class="btn-primary">Book a Free Brand Film Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTRODUCTION / STORY -->
+    <section class="philosophy-section">
+        <div class="container">
+             <div class="realism-grid">
+                <!-- Left: Content -->
+                <div class="fade-in">
+                    <h2 class="text-headline" style="margin-bottom: 2rem;">Your Story Deserves to Be <span style="color: var(--color-accent);">Seen</span> — and Remembered</h2>
+                    
+                    <p class="philosophy-desc">
+                        We create brand videos and brand films designed to shape perception, build trust, and create lasting emotional connections with your audience.
+                    </p>
+                    
+                    <div style="margin-top: 2rem;">
+                         <a href="#" onclick="openModal(); return false;" class="btn-secondary">Request a Quote</a>
+                    </div>
+                </div>
+                
+                <!-- Right: Video -->
+                <div class="fade-in delay-200" style="display: flex; justify-content: center;">
+                     <div class="philosophy-video-wrapper">
+                        <video autoplay muted loop playsinline class="philosophy-video">
+                            <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/we%20are%20video3.mp4" type="video/mp4">
+                        </video>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SERVICES -->
+    <section id="services" class="section-padding" style="background-color: #050505;">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="text-headline">Brand Video & Film <span style="color: var(--color-accent);">Services</span></h2>
+            </div>
+            
+            <div class="services-list-grid">
+                <div class="service-card-item fade-in delay-100">
+                    <h3>Cinematic Brand Films</h3>
+                    <p>High-end production values that elevate your brand image.</p>
+                </div>
+                <div class="service-card-item fade-in delay-200">
+                    <h3>Concept Development & Scriptwriting</h3>
+                    <p>Turning your core message into a compelling narrative.</p>
+                </div>
+                <div class="service-card-item fade-in delay-300">
+                    <h3>Professional Voiceover & Music</h3>
+                    <p>Licensed music and professional voice talent to set the perfect tone.</p>
+                </div>
+                 <div class="service-card-item fade-in delay-400">
+                    <h3>Multi-format Video Delivery</h3>
+                    <p>Optimized assets for web, social media, and broadcast.</p>
+                </div>
+                 <div class="service-card-item fade-in delay-500">
+                    <h3>Fast Revisions & Support</h3>
+                    <p>Collaborative workflow to ensure the final cut is perfect.</p>
+                </div>
+            </div>
+
+            <div class="text-center fade-in delay-500" style="margin-top: 3rem;">
+                <!-- Adding both options as buttons -->
+                <a href="#" onclick="openModal(); return false;" class="btn-primary" style="margin-right: 1rem;">Schedule a Consultation</a>
+                <a href="video-portfolio.html" class="btn-secondary">View Brand Film Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: PROCESS -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 class="text-headline">Brand Film Creation <span style="color: var(--color-accent);">Process</span></h2>
+            <p class="text-subhead" style="margin-top: 1rem;">A structured approach to storytelling</p>
+            
+            <div class="steps-grid">
+                <div class="step-card fade-in delay-100">
+                    <span class="step-number">01</span>
+                    <h3 class="step-title">Brand Discovery & Strategy</h3>
+                    <p style="color: var(--color-text-muted);">Uncovering your unique value proposition and goals.</p>
+                </div>
+                <div class="step-card fade-in delay-200">
+                    <span class="step-number">02</span>
+                    <h3 class="step-title">Concept & Story Development</h3>
+                    <p style="color: var(--color-text-muted);">Crafting the narrative arc and visual style.</p>
+                </div>
+                <div class="step-card fade-in delay-300">
+                    <span class="step-number">03</span>
+                    <h3 class="step-title">Pre-Production Planning</h3>
+                    <p style="color: var(--color-text-muted);">Logistics, locations, and casting.</p>
+                </div>
+                <div class="step-card fade-in delay-400">
+                    <span class="step-number">04</span>
+                    <h3 class="step-title">Filming & Production</h3>
+                    <p style="color: var(--color-text-muted);">Capturing cinematic footage with top-tier gear.</p>
+                </div>
+                 <div class="step-card fade-in delay-500">
+                    <span class="step-number">05</span>
+                    <h3 class="step-title">Post-Production & Finishing</h3>
+                    <p style="color: var(--color-text-muted);">Editing, grading, sound design, and effects.</p>
+                </div>
+                 <div class="step-card fade-in delay-600">
+                    <span class="step-number">06</span>
+                    <h3 class="step-title">Review & Final Delivery</h3>
+                    <p style="color: var(--color-text-muted);">Polishing until it's ready for the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: WHY CHOOSE (Feature Split) -->
+    <section class="cinematic-split-section">
+        <div class="split-container">
+            <!-- Content Side -->
+            <div class="split-content" style="padding-left: 5%; padding-right: 2%;">
+                <div class="split-header fade-in">
+                    <span class="eyebrow">StudioXAI Advantage</span>
+                    <h2 class="text-headline">Why Choose <span class="text-accent">StudioXAI</span></h2>
+                </div>
+
+                <ul class="feature-simple-list fade-in delay-100">
+                    <li>Cinematic storytelling expertise</li>
+                    <li>Strategic brand-focused narratives</li>
+                    <li>Premium production quality</li>
+                    <li>Experienced creative team</li>
+                    <li>Clear and collaborative process</li>
+                </ul>
+
+                <div class="split-cta fade-in delay-500">
+                    <a href="#" onclick="openModal(); return false;" class="btn-primary">Start Your Brand Film Project</a>
+                </div>
+            </div>
+
+             <!-- Video Side -->
+             <div class="split-visual fade-in delay-200">
+                <div class="video-container-tall">
+                     <video autoplay muted loop playsinline class="cinematic-video">
+                        <source src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/newyt.mp4" type="video/mp4">
+                    </video>
+                    <div class="visual-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA SECTION -->
+    <section class="section-padding text-center" style="background: linear-gradient(to bottom, #000, #111);">
+        <div class="container">
+            <h2 class="text-headline fade-in">Ready to Tell Your <span style="color: var(--color-accent);">Brand Story?</span></h2>
+            <p class="fade-in delay-200" style="max-width: 600px; margin: 1.5rem auto; color: rgba(255,255,255,0.8);">
+                Let’s create a powerful brand video or film that reflects who you are and connects with your audience.
+            </p>
+            <div class="fade-in delay-400" style="margin-top: 2rem;">
+                 <a href="#" onclick="openModal(); return false;" class="btn-primary">Book a Free Consultation</a>
+                 <br><br>
+                 <a href="#" onclick="openModal(); return false;" class="btn-link" style="color: #fff; text-decoration: underline;">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <img src="https://pub-d8add5c3ed1e4923aa87c457caea356d.r2.dev/Studio%20X%20AI_Logo.png" alt="StudioXAI" class="footer-logo-img-small" style="height: 60px;">
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="#">Terms</a>
+            <a href="#">Enterprise</a>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 2rem; opacity: 0.5;">&copy; 2026 Studio<span style="color: var(--color-accent);">X</span>AI All rights reserved</p>
+    </footer>
+
+    <!-- MODAL POPUP (Reusing existing structure) -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Start Your Brand Film Project</h2>
+                <p>Tell us about your brand vision. We'll respond within 24 hours.</p>
+            </div>
+            
+            <form class="modal-form" action="contact.php" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Work Email</label>
+                    <input type="email" name="email" placeholder="name@company.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Project Type</label>
+                    <select name="project_type">
+                        <option value="brand_film">Brand Film</option>
+                        <option value="concept_dev">Concept Development</option>
+                        <option value="commercial">Commercial</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea name="message" placeholder="Briefly describe your goals and requirements..." required></textarea>
+                </div>
+                
+                <button type="submit" class="modal-submit">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/modal.js"></script>
+    <script>
+        // Simple Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
