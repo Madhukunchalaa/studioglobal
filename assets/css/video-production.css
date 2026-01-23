@@ -639,3 +639,465 @@
     background: var(--color-accent);
     transform: translateY(-2px);
 }
+ 
+ / *   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  
+       S E R V I C E S   G A L L E R Y   ( H O R I Z O N T A L   S C R O L L )  
+       = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =   * /  
+ . g a l l e r y - s e c t i o n   {  
+         p a d d i n g :   v a r ( - - s p a c i n g - x x l )   0 ;  
+         b a c k g r o u n d :   # 0 0 0 ;  
+         o v e r f l o w :   h i d d e n ;  
+ }  
+  
+ . g a l l e r y - h e a d e r   {  
+         t e x t - a l i g n :   c e n t e r ;  
+         m a r g i n - b o t t o m :   2 r e m ;  
+         p a d d i n g :   0   v a r ( - - s p a c i n g - m d ) ;  
+ }  
+  
+ . g a l l e r y - t r a c k   {  
+         d i s p l a y :   f l e x ;  
+         o v e r f l o w - x :   a u t o ;  
+         s c r o l l - s n a p - t y p e :   x   m a n d a t o r y ;  
+         g a p :   1 . 5 r e m ;  
+         p a d d i n g :   0   1 . 5 r e m   3 r e m   1 . 5 r e m ;   / *   B o t t o m   p a d d i n g   f o r   s h a d o w / h o v e r   s p a c e   * /  
+         s c r o l l b a r - w i d t h :   n o n e ;   / *   F i r e f o x   * /  
+         - m s - o v e r f l o w - s t y l e :   n o n e ;   / *   I E / E d g e   * /  
+ }  
+  
+ . g a l l e r y - t r a c k : : - w e b k i t - s c r o l l b a r   {  
+         d i s p l a y :   n o n e ;   / *   C h r o m e / S a f a r i   * /  
+ }  
+  
+ . g a l l e r y - i t e m   {  
+         f l e x :   0   0   8 5 v w ;   / *   M o b i l e :   O n e   b i g   c a r d   a t   a   t i m e   * /  
+         h e i g h t :   6 0 v h ;  
+         s c r o l l - s n a p - a l i g n :   c e n t e r ;  
+         b o r d e r - r a d i u s :   2 0 p x ;  
+         p o s i t i o n :   r e l a t i v e ;  
+         o v e r f l o w :   h i d d e n ;  
+         b a c k g r o u n d :   # 1 1 1 ;  
+         b o r d e r :   1 p x   s o l i d   r g b a ( 2 5 5 , 2 5 5 , 2 5 5 , 0 . 1 ) ;  
+         b o x - s h a d o w :   0   1 0 p x   3 0 p x   r g b a ( 0 , 0 , 0 , 0 . 5 ) ;  
+         t r a n s i t i o n :   t r a n s f o r m   0 . 3 s   e a s e ;  
+ }  
+  
+ . g a l l e r y - i t e m   v i d e o   {  
+         w i d t h :   1 0 0 % ;  
+         h e i g h t :   1 0 0 % ;  
+         o b j e c t - f i t :   c o v e r ;  
+         o p a c i t y :   0 . 8 ;  
+         t r a n s i t i o n :   o p a c i t y   0 . 3 s   e a s e ;  
+ }  
+  
+ . g a l l e r y - i t e m : h o v e r   v i d e o   {  
+         o p a c i t y :   0 . 6 ;  
+ }  
+  
+ . g a l l e r y - c o n t e n t   {  
+         p o s i t i o n :   a b s o l u t e ;  
+         b o t t o m :   0 ;  
+         l e f t :   0 ;  
+         w i d t h :   1 0 0 % ;  
+         p a d d i n g :   2 r e m ;  
+         b a c k g r o u n d :   l i n e a r - g r a d i e n t ( t o   t o p ,   r g b a ( 0 , 0 , 0 , 0 . 9 5 )   0 % ,   t r a n s p a r e n t   1 0 0 % ) ;  
+         z - i n d e x :   2 ;  
+         t e x t - a l i g n :   l e f t ;  
+ }  
+  
+ . g a l l e r y - t i t l e   {  
+         f o n t - s i z e :   1 . 5 r e m ;  
+         f o n t - f a m i l y :   v a r ( - - f o n t - s e r i f ) ;  
+         c o l o r :   # f f f ;  
+         m a r g i n - b o t t o m :   0 . 5 r e m ;  
+         t e x t - s h a d o w :   0   2 p x   1 0 p x   r g b a ( 0 , 0 , 0 , 0 . 5 ) ;  
+ }  
+  
+ / *   D e s k t o p   R e s p o n s i v e   * /  
+ @ m e d i a   ( m i n - w i d t h :   9 0 0 p x )   {  
+         . g a l l e r y - t r a c k   {  
+                 p a d d i n g :   0   v a r ( - - s p a c i n g - x x l )   3 r e m ;   / *   M o r e   s i d e   p a d d i n g   o n   d e s k t o p   * /  
+                 g a p :   2 r e m ;  
+         }  
+  
+         . g a l l e r y - i t e m   {  
+                 f l e x :   0   0   4 5 0 p x ;   / *   F i x e d   w i d t h   c a r d s   o n   d e s k t o p   * /  
+                 h e i g h t :   5 0 0 p x ;  
+         }  
+ }  
+ 
+/* =========================================
+   SERVICES GALLERY (HORIZONTAL SCROLL)
+   ========================================= */
+.gallery-section {
+    padding: var(--spacing-xxl) 0;
+    background: #000;
+    overflow: hidden;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 0 var(--spacing-md);
+}
+
+.gallery-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 0 1.5rem 3rem 1.5rem; /* Bottom padding for shadow/hover space */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+
+.gallery-track::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.gallery-item {
+    flex: 0 0 85vw; /* Mobile: One big card at a time */
+    height: 60vh;
+    scroll-snap-align: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    background: #000; /* Darker background */
+    border: 1px solid rgba(255,255,255,0.05); /* Softer border */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6); /* Deeper shadow */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.7s ease;
+}
+
+.gallery-item:hover video {
+    opacity: 1;
+    transform: scale(1.05); /* Zoom effect */
+}
+
+.gallery-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.8) 50%, transparent 100%);
+    z-index: 2;
+    text-align: left;
+    pointer-events: none;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.8);
+}
+
+.gallery-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-accent);
+    font-weight: 600;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* Desktop Responsive */
+@media (min-width: 900px) {
+    .gallery-track {
+        padding: 0 var(--spacing-xxl) 3rem;
+        gap: 2rem;
+    }
+
+    .gallery-item {
+        flex: 0 0 450px;
+        height: 500px;
+    }
+}
+
+/* =========================================
+   SERVICES GALLERY (FULL WIDTH OVERRIDE)
+   ========================================= */
+.gallery-track {
+    padding: 0 0 3rem 0; /* Remove side padding so cards touch edges */
+    gap: 0; /* Remove gap for seamless transitions */
+}
+
+.gallery-item {
+    flex: 0 0 100vw; /* Exact viewport width */
+    width: 100vw;
+    height: 70vh; /* Increased height for better mobile immersion */
+    border-radius: 0; /* Remove corners for full-screen feel */
+    border-left: none;
+    border-right: none;
+    margin: 0;
+}
+
+.gallery-content {
+    padding-left: 1.5rem; /* Add back some internal padding for text */
+    padding-right: 1.5rem;
+}
+
+/* Restore Desktop Layout (Don't let full-width affect desktop) */
+@media (min-width: 900px) {
+    .gallery-track {
+        padding: 0 var(--spacing-xxl) 3rem;
+        gap: 2rem;
+    }
+
+    .gallery-item {
+        flex: 0 0 500px;
+        width: 500px;
+        height: 600px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
+}
+
+/* Desktop Responsive Override - Keep Full Width */
+@media (min-width: 900px) {
+    .gallery-track {
+        padding: 0 0 3rem 0;
+        gap: 0;
+    }
+
+    .gallery-item {
+        flex: 0 0 100vw;
+        width: 100vw;
+        height: 90vh;
+        border-radius: 0;
+    }
+}
+
+/* =========================================
+   SERVICES GALLERY (VERTICAL LAYOUT OVERRIDE)
+   ========================================= */
+.gallery-track {
+    display: block; /* Stack vertically */
+    overflow-x: visible; /* No horizontal scroll */
+    white-space: normal;
+    padding: 0;
+    gap: 0;
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    flex: none; /* Disable flex sizing */
+    margin-bottom: 0;
+    border-radius: 0; /* Square edges */
+    border: none;
+    position: relative;
+    box-shadow: none; /* Clean stack */
+}
+
+/* Ensure desktop also follows this */
+@media (min-width: 900px) {
+    .gallery-track {
+         padding: 0;
+         gap: 0;
+    }
+    .gallery-item {
+        width: 100%;
+        height: 100vh;
+        flex: none;
+    }
+}
+
+/* =========================================
+   SERVICES GALLERY (VERTICAL SCROLL SNAP)
+   ========================================= */
+.gallery-section {
+    padding: 0; /* Remove padding to let track fill screen */
+    height: 100vh; /* Fix section height */
+    position: relative; /* Context */
+}
+
+.gallery-header {
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none; /* Let clicks pass through */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    mix-blend-mode: difference; /* Better visibility over video */
+}
+
+.gallery-track {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    padding: 0;
+}
+
+.gallery-track::-webkit-scrollbar {
+    width: 0px;  /* Hide scrollbar for immersion */
+    background: transparent;
+}
+
+.gallery-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always; /* Force stop at each video */
+    width: 100%;
+    height: 100vh;
+}
+
+/* =========================================
+   SERVICES GALLERY (STICKY STACK LAYOUT)
+   ========================================= */
+.gallery-section {
+    padding: 0; /* Let items fill screen */
+    background: #000;
+    overflow: visible; /* Essential for sticky to work */
+    height: auto;
+}
+
+.gallery-header {
+    position: sticky;
+    top: 5vh;
+    z-index: 20;
+    pointer-events: none;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    mix-blend-mode: difference;
+    margin-bottom: 0;
+    height: 0; /* Don't take up flow space */
+}
+
+.gallery-track {
+    display: block;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-item {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: 0 -10px 50px rgba(0,0,0,0.8); /* Shadow at TOP to show separation */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content is at bottom */
+}
+
+/* Ensure z-index layering (usually standard flow handles this, 
+   but specific indices help if needed. Sticky elements naturally stack). */
+.gallery-item:nth-child(1) { z-index: 1; }
+.gallery-item:nth-child(2) { z-index: 2; }
+.gallery-item:nth-child(3) { z-index: 3; }
+.gallery-item:nth-child(4) { z-index: 4; }
+.gallery-item:nth-child(5) { z-index: 5; }
+.gallery-item:nth-child(6) { z-index: 6; }
+.gallery-item:nth-child(7) { z-index: 7; }
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Desktop: Same behavior */
+@media (min-width: 900px) {
+    .gallery-item {
+        width: 100%;
+        height: 100vh;
+        flex: none;
+    }
+}
+
+/* =========================================
+   SERVICES GALLERY (HEADER FIX)
+   ========================================= */
+.gallery-header {
+    position: relative; /* Back to normal flow */
+    top: auto;
+    height: auto;
+    margin-bottom: 2rem;
+    z-index: 2; /* Keep above if needed, but usually fine */
+    mix-blend-mode: normal;
+    text-shadow: none;
+    padding-top: 4rem; /* Add some spacing from previous section */
+    pointer-events: auto;
+}
+
+.gallery-section {
+    padding-top: 0;
+    overflow: visible;
+}
+
+/* Ensure track starts after header */
+.gallery-track {
+    margin-top: 0;
+}
+
+/* =========================================
+   VIDEO PLAYBACK MODAL
+   ========================================= */
+.video-modal-overlay {
+    background: rgba(0, 0, 0, 0.95) !important; /* Darker for cinema mode */
+    z-index: 10000 !important;
+}
+
+.video-modal-content {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    width: 90%;
+    max-width: 1200px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    max-height: 90vh;
+}
+
+#modal-video-player {
+    width: 100%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    background: #000;
+}
+
+.close-video-modal {
+    top: 2rem;
+    right: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0.8;
+    z-index: 10001;
+}
+
+.close-video-modal:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
+/* Make gallery items clickable */
+.gallery-item {
+    cursor: pointer;
+}
+
+.gallery-item video {
+    pointer-events: none; /* Let the click pass to the parent div */
+}

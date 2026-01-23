@@ -1,0 +1,67 @@
+
+/* =========================================
+   SERVICES GALLERY (STICKY STACK LAYOUT)
+   ========================================= */
+.gallery-section {
+    padding: 0; /* Let items fill screen */
+    background: #000;
+    overflow: visible; /* Essential for sticky to work */
+    height: auto;
+}
+
+.gallery-header {
+    position: sticky;
+    top: 5vh;
+    z-index: 20;
+    pointer-events: none;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    mix-blend-mode: difference;
+    margin-bottom: 0;
+    height: 0; /* Don't take up flow space */
+}
+
+.gallery-track {
+    display: block;
+    height: auto;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+}
+
+.gallery-item {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: 0 -10px 50px rgba(0,0,0,0.8); /* Shadow at TOP to show separation */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure content is at bottom */
+}
+
+/* Ensure z-index layering (usually standard flow handles this, 
+   but specific indices help if needed. Sticky elements naturally stack). */
+.gallery-item:nth-child(1) { z-index: 1; }
+.gallery-item:nth-child(2) { z-index: 2; }
+.gallery-item:nth-child(3) { z-index: 3; }
+.gallery-item:nth-child(4) { z-index: 4; }
+.gallery-item:nth-child(5) { z-index: 5; }
+.gallery-item:nth-child(6) { z-index: 6; }
+.gallery-item:nth-child(7) { z-index: 7; }
+
+.gallery-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Desktop: Same behavior */
+@media (min-width: 900px) {
+    .gallery-item {
+        width: 100%;
+        height: 100vh;
+        flex: none;
+    }
+}

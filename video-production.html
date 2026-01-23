@@ -385,6 +385,18 @@
                 <button type="submit" class="modal-submit">Send Request</button>
             </form>
         </div>
+        </div>
+    </div>
+
+    <!-- VIDEO PLAYBACK MODAL -->
+    <div id="video-modal" class="modal-overlay video-modal-overlay">
+        <button class="close-modal close-video-modal" onclick="closeVideoModal()">&times;</button>
+        <div class="video-modal-content">
+            <video id="modal-video-player" controls playsinline>
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
 
     <!-- SCRIPTS -->
