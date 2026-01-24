@@ -1,0 +1,215 @@
+/* StudioX Brand Videos & Films - Premium Cinematic Styles */
+
+:root {
+    --color-bg-deep: #050505;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: rgba(255, 255, 255, 0.7);
+    --color-accent: #00D2FF;
+    --color-accent-glow: rgba(0, 210, 255, 0.3);
+    
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    --glass-bg: rgba(20, 20, 30, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(12px);
+}
+
+/* Base Overrides */
+body {
+    background-color: var(--color-bg-deep);
+    font-family: var(--font-body);
+}
+
+/* Typography Enhancements */
+.hero-title-cinematic {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text-upper {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.hero-text-main {
+    font-size: clamp(3rem, 6vw, 5rem);
+    background: linear-gradient(180deg, #FFFFFF 20%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text-sub {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-style: italic;
+    color: var(--color-text-secondary);
+    font-weight: 400;
+}
+
+/* Glassmorphism Service Cards */
+.services-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.service-card-premium {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 2.5rem;
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.service-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top right, var(--color-accent-glow), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.service-card-premium:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-accent);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.service-card-premium:hover::before {
+    opacity: 1;
+}
+
+.service-card-premium h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+.service-card-premium p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Feature List Styling */
+.premium-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.premium-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.03) 0%, transparent 100%);
+    border-left: 2px solid var(--color-accent);
+    transition: padding-left 0.3s ease;
+}
+
+.premium-feature-item:hover {
+    padding-left: 1.5rem;
+    background: linear-gradient(90deg, rgba(255,255,255,0.06) 0%, transparent 100%);
+}
+
+.feature-text {
+    font-size: 1.1rem;
+    color: var(--color-text-primary);
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-cinema {
+    background: transparent;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 1rem 2rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-cinema:hover {
+    background: var(--color-accent);
+    color: #000;
+    box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.btn-cinema-filled {
+    background: var(--color-accent);
+    color: #000;
+    border: 1px solid var(--color-accent);
+}
+
+/* Standard CTA Button (Site Match) */
+.btn-standard-cta {
+    background: var(--color-accent);
+    color: #000;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border-radius: 50px; /* Pillow shape like main site */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px var(--color-accent-glow);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.btn-standard-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px var(--color-accent-glow);
+    background: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .services-grid-premium {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .hero-text-main {
+        line-height: 1;
+    }
+}
