@@ -30,3 +30,25 @@ document.addEventListener('keydown', function(event) {
         closeModal();
     }
 });
+
+// Conditional Form Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const projectTypeSelect = document.getElementById('project_type_select');
+    const projectDetailsGroup = document.getElementById('project_details_group');
+
+    if (projectTypeSelect && projectDetailsGroup) {
+        projectTypeSelect.addEventListener('change', function() {
+            if (this.value) {
+                projectDetailsGroup.style.display = 'block';
+                // Trigger a small fade-in if desired, or just show it
+                projectDetailsGroup.style.opacity = 0;
+                setTimeout(() => {
+                    projectDetailsGroup.style.transition = 'opacity 0.5s ease';
+                    projectDetailsGroup.style.opacity = 1;
+                }, 10);
+            } else {
+                projectDetailsGroup.style.display = 'none';
+            }
+        });
+    }
+});
