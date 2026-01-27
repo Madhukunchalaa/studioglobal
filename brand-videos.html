@@ -99,7 +99,7 @@
                         </div>
                         <h3 class="stage-title">Cinematic Brand Films</h3>
                         <p class="stage-desc">High-end production that merges art and strategy. We create flagship brand films that define your visual identity and captivate your audience.</p>
-                        <a href="#" class="btn-primary">View Portfolio</a>
+                        <a href="#" onclick="openModal('View Portfolio'); return false;" class="btn-primary">View Portfolio</a>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@
                         </div>
                         <h3 class="stage-title">Concept & Script</h3>
                         <p class="stage-desc">The blueprint of every great film. We develop compelling narratives, storyboards, and scripts that align perfectly with your market positioning.</p>
-                        <a href="#" class="btn-primary">Start Strategy</a>
+                        <a href="#" onclick="openModal('Start Strategy'); return false;" class="btn-primary">Start Strategy</a>
                     </div>
                 </div>
 
@@ -125,7 +125,7 @@
                         </div>
                         <h3 class="stage-title">Professional Voiceover</h3>
                         <p class="stage-desc">World-class audio engineering. We handle voice casting, licensing, and mixing to ensure your brand sounds as good as it looks.</p>
-                         <a href="#" class="btn-primary">Listen to Samples</a>
+                         <a href="#" onclick="openModal('Listen to Samples'); return false;" class="btn-primary">Listen to Samples</a>
                     </div>
                 </div>
 
@@ -138,7 +138,7 @@
                         </div>
                         <h3 class="stage-title">Motion Graphics</h3>
                         <p class="stage-desc">Visualize the invisible. Our 2D/3D motion graphics team explains complex concepts through stunning, dynamic animation.</p>
-                         <a href="#" class="btn-primary">View VFX Reel</a>
+                         <a href="#" onclick="openModal('View VFX Reel'); return false;" class="btn-primary">View VFX Reel</a>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@
                         </div>
                         <h3 class="stage-title">Social Media Edits</h3>
                         <p class="stage-desc">Content configured for the feed. We engage users with fast-paced, vertical cuts optimized for Instagram Reels, TikTok, and Shorts.</p>
-                         <a href="#" class="btn-primary">See Results</a>
+                         <a href="#" onclick="openModal('See Results'); return false;" class="btn-primary">See Results</a>
                     </div>
                 </div>
 
@@ -263,7 +263,7 @@
 
 
     <!-- 6. CTA SECTION -->
-    <section class="section-cta" style="position: relative; padding: 5rem 0; overflow: hidden;">
+    <section class="section-cta" style="position: relative; padding: 3rem 0; overflow: hidden;">
         <!-- Background Video -->
         <!-- Background Video -->
         <video autoplay muted loop playsinline class="cta-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 1;">
@@ -299,13 +299,13 @@
 
     <!-- MODAL -->
     <div id="projectModal" class="modal-overlay">
-        <div class="modal-content" style="background: transparent; padding: 0; max-width: 600px; width: 100%;">
+        <div class="modal-content" style="background: transparent; padding: 0; max-width: 500px; width: 100%;">
             <!-- Uses the ported styles from contact page (.prj-input-panel) -->
              <div class="prj-input-panel" style="border: 1px solid #333; position: relative;">
-                <button class="close-modal" onclick="closeModal()" style="position: absolute; top: 20px; right: 20px; background: transparent; border: none; font-size: 2rem; color: #666; cursor: pointer; z-index: 10;">&times;</button>
+                <button class="close-modal" onclick="closeModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; font-size: 1.5rem; color: #666; cursor: pointer; z-index: 10;">&times;</button>
                 
-                <div class="modal-header" style="text-align: center; margin-bottom: 2rem; position: relative; padding: 0;">
-                    <h2 class="serif" style="font-size: 2.5rem; margin-bottom: 0.5rem;">Inquire</h2>
+                <div class="modal-header" style="text-align: center; margin-bottom: 1.5rem; position: relative; padding: 0;">
+                    <h2 class="serif" style="font-size: 2rem; margin-bottom: 0.5rem;">Inquire</h2>
                     <p style="color: #666; font-size: 1.1rem;">Begin the conversation.</p>
                 </div>
                 

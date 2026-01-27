@@ -23,9 +23,9 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* UTILS */
 .container {
-    max-width: 1400px;
+    max-width: 1800px; /* Increased from 1400px to fill space */
     margin: 0 auto;
-    padding: 0 4vw;
+    padding: 0 2vw; /* Reduced side padding */
     position: relative;
 }
 
@@ -134,7 +134,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 /* 2. OVERLAP SECTION (INTRO) */
 .section-overlap {
     position: relative;
-    padding: 5rem 0; /* Reduced from 10rem */
+    padding: 3rem 0; /* Reduced from 5rem */
 }
 
 
@@ -191,7 +191,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 3. COLUMNS SECTION (SERVICES) */
 .section-columns {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 .cols-header {
@@ -209,7 +209,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 3. SERVICES (CINEMA SHOWCASE) */
 .section-services {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     background: #000;
     position: relative;
     border-top: 1px solid #111;
@@ -359,7 +359,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 4. PROCESS SECTION (SNAKE PIPE GRID) */
 .section-process {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background: #050505;
     overflow: hidden;
 }
@@ -571,7 +571,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 /* 5. WHY US (Replaces Break) */
 .section-why-us {
     position: relative;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background: #0a0a0a;
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
@@ -620,7 +620,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* FOOTER / CTA */
 .editorial-footer {
-    padding: 3rem 0;
+    padding: 2.5rem 0;
     border-top: 1px solid #222;
     display: flex;
     justify-content: space-between;
@@ -684,9 +684,44 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
     }
     .section-cta { padding: 2.5rem 0 !important; }
 
-    /* Hero */
-    .hero-title { font-size: 2.8rem; }
-    .hero-video-wrap { height: 50vh; }
+    /* Hero Overlay for Mobile */
+    .hero-grid { 
+        display: block; 
+        position: relative; 
+        height: 100vh; /* Make hero full screen on mobile */
+        margin-top: -100px; /* Counteract body padding-top */
+        padding: 0 !important; /* OVERRIDE .container PADDING */
+        width: 100vw; /* Force full viewport width */
+        max-width: none; /* Unwrap from container constraint */
+        left: 50%; /* Center break-out */
+        margin-left: -50vw; /* Center break-out */
+    }
+    .hero-video-wrap { 
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        margin-bottom: 0;
+        z-index: 0;
+    }
+    .hero-text {
+        position: absolute; /* Lock to bottom */
+        bottom: 0; left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 50vh; /* Increased gradient height for smoothness */
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Push content to very bottom */
+        padding: 4rem 2rem 3rem; /* More top padding for gradient fade */
+        /* Seamless Gradient Fade */
+        background: linear-gradient(to top, #000 0%, rgba(0,0,0,0.9) 30%, transparent 100%);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border-top: none;
+    }
+    .hero-title { font-size: 2.5rem; text-shadow: none; margin-bottom: 1.5rem; }
+    .hero-text p { font-size: 1rem; color: #ccc; margin-bottom: 2rem; } /* Ensure subtext is visible if any */
     .btn-primary, .btn-secondary { width: 100%; text-align: center; justify-content: center; }
 
     /* Intro */
@@ -796,15 +831,15 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 .prj-input-panel {
     background: #0a0a0a;
-    padding: 60px 40px; 
-    border: 1px solid #222; /* Full border for standalone modal */
+    padding: 30px 25px; /* Drastically reduced from 60px 40px */
+    border: 1px solid #333; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .prj-field-wrapper {
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Reduced from 25px */
 }
 
 .prj-field-tag {
@@ -820,12 +855,12 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 .prj-choice-field,
 .prj-message-field {
     width: 100%;
-    padding: 14px 18px;
+    padding: 10px 14px; /* Reduced from 14px 18px */
     background: #111;
     border: 1px solid #333;
     border-radius: 6px;
     color: #fff;
-    font-size: 1rem;
+    font-size: 0.95rem; /* Slightly smaller font */
     transition: all 0.3s ease;
     font-family: inherit;
 }
@@ -868,7 +903,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 }
 
 .prj-message-field {
-    min-height: 120px;
+    min-height: 80px; /* Reduced from 120px */
     resize: vertical;
 }
 
