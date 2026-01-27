@@ -134,8 +134,9 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 /* 2. OVERLAP SECTION (INTRO) */
 .section-overlap {
     position: relative;
-    padding: 10rem 0;
+    padding: 5rem 0; /* Reduced from 10rem */
 }
+
 
 .overlap-bg-text {
     font-family: var(--font-serif);
@@ -190,7 +191,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 3. COLUMNS SECTION (SERVICES) */
 .section-columns {
-    padding: 8rem 0;
+    padding: 4rem 0;
 }
 
 .cols-header {
@@ -208,7 +209,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 3. SERVICES (CINEMA SHOWCASE) */
 .section-services {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: #000;
     position: relative;
     border-top: 1px solid #111;
@@ -349,7 +350,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* 4. PROCESS SECTION (SNAKE PIPE GRID) */
 .section-process {
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: #050505;
     overflow: hidden;
 }
@@ -396,10 +397,24 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--accent);
+    transition: color 0.3s ease;
+}
+
+.p-desc { 
+    color: #888; 
+    line-height: 1.6; 
+    font-size: 0.95rem; 
+    transition: color 0.3s ease;
+}
+
+.p-card:hover .p-title {
     color: #fff;
 }
 
-.p-desc { color: #888; line-height: 1.6; font-size: 0.95rem; }
+.p-card:hover .p-desc {
+    color: var(--accent);
+}
 
 /* --- PIPES & LIQUID ANIMATION --- */
 @keyframes flowRight {
@@ -547,7 +562,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 /* 5. WHY US (Replaces Break) */
 .section-why-us {
     position: relative;
-    padding: 8rem 0;
+    padding: 4rem 0;
     background: #0a0a0a;
     border-top: 1px solid #222;
     border-bottom: 1px solid #222;
@@ -596,7 +611,7 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
 
 /* FOOTER / CTA */
 .editorial-footer {
-    padding: 6rem 0;
+    padding: 3rem 0;
     border-top: 1px solid #222;
     display: flex;
     justify-content: space-between;
@@ -615,13 +630,273 @@ h1, h2, h3 { margin: 0; font-weight: 700; font-family: var(--font-serif); }
     mix-blend-mode: exclusion;
 }
 
-/* RESPONSIVE */
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
 @media (max-width: 1024px) {
-    .hero-grid { grid-template-columns: 1fr; }
-    .hero-video-wrap { height: 50vh; order: -1; margin-bottom: 2rem; }
-    .intro-card { margin: 0; width: 100%; }
-    .service-row { grid-template-columns: 1fr; gap: 1rem; }
-    .scatter-grid { grid-template-columns: 1fr; }
-    .scatter-item:nth-child(n) { margin-top: 0; }
-    .editorial-footer { flex-direction: column; align-items: flex-start; gap: 3rem; }
+    .container { padding: 0 5vw; }
+    
+    .hero-grid { 
+        grid-template-columns: 1fr; 
+        gap: 3rem;
+    }
+    
+    .hero-video-wrap { 
+        height: 60vh; 
+        order: -1; /* Video on top */
+        margin-bottom: 2rem; 
+    }
+    
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .intro-video-left {
+        order: -1; 
+        height: 400px; 
+    }
+    
+    .section-overlap { padding: 4rem 0; }
+    .section-columns { padding: 3rem 0; }
+    .section-services { padding: 2rem 0; }
+    .section-process { padding: 3rem 0; }
+    .section-why-us { padding: 3rem 0; }
+}
+
+@media (max-width: 768px) {
+    /* Hero */
+    .hero-title { font-size: 2.8rem; }
+    .hero-video-wrap { height: 50vh; }
+    .btn-primary, .btn-secondary { width: 100%; text-align: center; justify-content: center; }
+
+    /* Intro */
+    .overlap-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .intro-card { 
+        margin: 0; 
+        padding: 2rem; 
+        width: 100%; 
+        border-left: none; 
+        border-top: 1px solid var(--accent); 
+    }
+    .overlap-bg-text { font-size: 18vw; top: 20%; }
+    .intro-video-left { height: 300px; margin-bottom: 2rem; }
+
+    /* Services */
+    .section-columns .cols-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .cols-header p { text-align: left; max-width: 100%; margin: 0; }
+    
+    .services-tabs { gap: 1rem; flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding-bottom: 1rem; }
+    .s-tab-btn { font-size: 0.9rem; padding: 0.5rem 1rem; flex-shrink: 0; }
+    
+    .service-stage { height: auto; min-height: 500px; display: flex; flex-direction: column; }
+    .stage-panel { position: relative; opacity: 1; visibility: visible; display: none; height: auto; flex-direction: column; }
+    .stage-panel.active { display: flex; }
+    .stage-content { 
+        width: 100%; 
+        padding: 2rem; 
+        background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0.9) 70%, transparent 100%); 
+        justify-content: flex-end; 
+        transform: none !important;
+        /* Ensure content sits on top */
+        margin-top: auto; 
+        min-height: 300px;
+    }
+    .stage-video-bg { position: absolute; height: 100%; }
+
+    /* Process */
+    .process-grid { grid-template-columns: 1fr; gap: 3rem; margin-top: 2rem; }
+    .p-card { margin-bottom: 0; }
+    /* Hide desktop pipes, rely on mobile pipes defined above or simplify */
+    
+    /* Why Us */
+    .why-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .why-image-wrap { height: 300px; order: -1; }
+    .why-content h2 { font-size: 2.2rem; }
+
+    /* CTA */
+    .section-cta { padding: 4rem 0 !important; }
+    .section-cta h2 { font-size: 2.5rem !important; }
+    .section-cta p { font-size: 1rem !important; }
+    .section-cta div[style*="flex"] { flex-direction: column; gap: 1rem; width: 100%; padding: 0 1rem; }
+    
+    /* Footer */
+    .editorial-footer { flex-direction: column; align-items: flex-start; gap: 2rem; }
+    .editorial-footer div { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .editorial-footer a { margin: 0; display: block; margin-bottom: 0.5rem; }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 1.5rem; }
+    .hero-title { font-size: 2.2rem; }
+    .p-num { font-size: 2.5rem; }
+    .modal-content { max-width: 100%; height: 100%; border-radius: 0; border: none; }
+    .prj-input-panel { border: none; height: 100%; padding: 2rem 1.5rem; justify-content: flex-start; overflow-y: auto; }
+}
+
+/* ========================================
+   CONTACT FORM STYLES (Ported from styles.css)
+   ======================================== */
+.prj-inquiry-zone {
+    padding: 80px 20px;
+    background: #000;
+}
+
+.prj-max-bound {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.prj-title-block {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.prj-main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.prj-sub-caption {
+    font-size: 1.25rem;
+    color: #999;
+}
+
+.prj-dual-layout {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; Remove splitting for modal use, or keep consistent */
+    display: block; /* For modal, we just want the form panel style */
+    gap: 0;
+}
+
+.prj-input-panel {
+    background: #0a0a0a;
+    padding: 60px 40px; 
+    border: 1px solid #222; /* Full border for standalone modal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prj-field-wrapper {
+    margin-bottom: 25px;
+}
+
+.prj-field-tag {
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: left; 
+}
+
+.prj-text-field,
+.prj-choice-field,
+.prj-message-field {
+    width: 100%;
+    padding: 14px 18px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.prj-text-field:focus,
+.prj-choice-field:focus,
+.prj-message-field:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: #1a1a1a;
+}
+
+.prj-text-field::placeholder,
+.prj-message-field::placeholder {
+    color: #666;
+}
+
+/* Remove spin buttons from number inputs */
+.prj-text-field[type=number]::-webkit-inner-spin-button, 
+.prj-text-field[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.prj-text-field[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.prj-choice-field {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23999' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.prj-choice-field option {
+    background: #111;
+    color: #fff;
+}
+
+.prj-message-field {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.prj-split-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.prj-action-trigger {
+    width: 100%;
+    padding: 16px 32px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.prj-action-trigger:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.prj-action-trigger:active {
+    transform: translateY(0);
+}
+
+.prj-legal-note {
+    text-align: center;
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .prj-input-panel {
+        padding: 40px 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .prj-split-fields {
+        grid-template-columns: 1fr;
+    }
 }
